@@ -63,6 +63,26 @@
 <p>Every good data presentation needs charts. Julius AI lets you upload your dataset and generate charts in plain English — no Excel formulas, no Tableau calculated fields.</p>
 <p>"Show me a bar chart of revenue by region for Q1 2026, sorted from highest to lowest." Done in 15 seconds. Copy the chart into your Gamma presentation.</p>
 
+<div style="background:#1a1a2e;color:#e0e0e0;padding:20px;border-radius:10px;margin:20px 0;font-family:monospace;font-size:13px;line-height:1.8;">
+  <div style="font-size:11px;color:#4a90d9;font-family:Arial;margin-bottom:12px;font-weight:bold;letter-spacing:.08em;">ANALYST PROMPT — COPY &amp; PASTE INTO JULIUS AI</div>
+  <div style="margin-bottom:6px;"><span style="color:#4a90d9;">TASK:</span> Show monthly churn rate trend for a B2B SaaS company</div>
+  <div style="margin-bottom:6px;"><span style="color:#4a90d9;">DATA:</span> Connect your CSV or database — columns needed: Month, Churn_Rate_Pct</div>
+  <div style="margin-bottom:6px;"><span style="color:#4a90d9;">OUTPUT:</span> Clean line chart with danger threshold and color-coded areas</div>
+  <div style="margin-bottom:16px;"><span style="color:#4a90d9;">FLAG:</span> Highlight months where churn rate exceeds 5% threshold</div>
+  <div style="color:#aaa;font-size:12px;border-top:1px solid #333;padding-top:12px;line-height:2;">
+    <div style="margin-bottom:4px;"><span style="color:#7a8fa6;">1. DATASET</span> — 12 months (Jan–Dec 2025) · Churn_Rate_Pct range 2%–7% · realistic fluctuation · 3 months above 5%</div>
+    <div style="margin-bottom:4px;"><span style="color:#7a8fa6;">2. CALCULATION</span> — Monthly churn rate % · identify highest and lowest months</div>
+    <div style="margin-bottom:4px;"><span style="color:#7a8fa6;">3. VISUALIZATION</span> — Single line chart · red dashed line at 5% threshold · fill red above threshold, green below · label only highest and lowest points · title: "Monthly Churn Rate — B2B SaaS 2025"</div>
+    <div><span style="color:#7a8fa6;">4. INSIGHT</span> — Worst and best months · overall trend · one recommendation · max 2 sentences</div>
+  </div>
+</div>
+
+<div style="margin:20px 0;">
+  <p style="font-size:13px;color:#555;margin-bottom:8px;"><strong>Result:</strong> Generated in under 15 seconds — Julius AI identified January and March as danger months (above 5% threshold), with a clear improvement trend through the year.</p>
+  <img src="https://nmk86.github.io/julius-ai-churn-chart.png" alt="Julius AI churn rate line chart — B2B SaaS 2025" style="width:100%;border-radius:8px;border:1px solid #eee;">
+  <p style="font-size:12px;color:#888;margin-top:6px;">Red area = churn above 5% danger threshold. Green area = healthy churn range. High point labeled at 6.18% (Jan), low point at 3.01% (Nov). No formulas, no drag and drop.</p>
+</div>
+
 <div class="verdict">
   Verdict: Julius AI is the fastest way to generate presentation-ready charts from raw data. Use it before opening Gamma.
   <br><br>
