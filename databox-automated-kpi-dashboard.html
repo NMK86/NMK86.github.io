@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Data Analysts Can Use Databox to Build Automated KPI Dashboards</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #333; }
+    h1 { font-size: 28px; }
+    h2 { font-size: 22px; margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 8px; }
+    .verdict { background: #f5f5f5; padding: 12px 16px; border-left: 4px solid #4a90d9; margin: 16px 0; }
+    .prompt-box { background: #1a1a2e; color: #e0e0e0; padding: 16px; border-radius: 8px; margin: 16px 0; font-family: monospace; font-size: 13px; line-height: 1.6; }
+    .prompt-label { font-size: 11px; color: #4a90d9; font-family: Arial; margin-bottom: 8px; font-weight: bold; letter-spacing: .05em; }
+    .result-box { background: #eaf4ff; padding: 14px 16px; border-radius: 6px; margin: 16px 0; border-left: 3px solid #4a90d9; }
+    .result-label { font-size: 11px; color: #1a5f9e; font-weight: bold; margin-bottom: 6px; letter-spacing: .05em; }
+    .step { display: flex; gap: 14px; margin: 20px 0; align-items: flex-start; }
+    .step-num { background: #4a90d9; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+    .cta { background: #4a90d9; color: white; padding: 14px 24px; text-decoration: none; border-radius: 6px; display: inline-block; margin: 10px 0; }
+    .tool-tag a { display: inline-block; background: #EEEDFE; color: #3C3489; padding: 2px 10px; border-radius: 20px; font-size: 12px; margin: 2px; text-decoration: none; }
+    a { color: #4a90d9; }
+    table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+    th { background: #4a90d9; color: white; padding: 10px 14px; text-align: left; }
+    td { padding: 10px 14px; border-bottom: 1px solid #eee; }
+    tr:nth-child(even) { background: #f9f9f9; }
+  </style>
+</head>
+<body>
+
+<p><a href="/" style="color:#4a90d9;text-decoration:none;font-size:16px;">← Back to all guides</a></p>
+
+<h1>How Data Analysts Can Use Databox to Build Automated KPI Dashboards</h1>
+<p style="color:#888;font-size:14px;margin-top:-10px;">Stop rebuilding the same dashboard every week — build it once and let it run</p>
+
+<p style="background:#eaf4ff;padding:12px 16px;border-radius:6px;">Ready to automate your KPI tracking? <a href="https://databox.com?aff_id=14134623&fp_ref=nm93" target="_blank" style="color:#1a5f9e;font-weight:bold;">Try Databox free — no credit card required →</a></p>
+
+<p>Most data analysts rebuild the same KPI report every week. Same metrics, same format, same stakeholders — just different numbers. It's one of the biggest time drains in the job, and it's completely avoidable. Here's how to build an automated KPI dashboard in Databox that updates itself and delivers to your stakeholders automatically.</p>
+
+<h2>What is Databox?</h2>
+<p>Databox is a business intelligence tool that connects to your data sources — Google Analytics, Salesforce, HubSpot, SQL databases, Sheets, and 70+ others — and displays your key metrics in a live dashboard. The dashboard updates automatically as your data changes. You build it once, and it runs forever.</p>
+<p>For data analysts, the most valuable feature is automated report delivery: you can schedule your dashboard to be emailed to any list of stakeholders on any schedule — daily, weekly, monthly — without you touching anything.</p>
+
+<div class="verdict">
+  Databox is not a visualization tool for analysts — it's a delivery tool. Its job is to get your metrics to the people who need them, automatically.
+</div>
+
+<h2>Step 1 — Connect Your Data Sources</h2>
+<p>Databox connects to over 70 data sources natively. For most analysts, the relevant ones are Google Analytics, a CRM (Salesforce, HubSpot), a spreadsheet (Google Sheets, Excel), or a database via SQL query.</p>
+
+<div class="step">
+  <div class="step-num">1</div>
+  <div>In Databox, go to Data Manager → Connect a Datasource → select your source and authenticate.</div>
+</div>
+
+<div class="prompt-box">
+  <div class="prompt-label">MOST USEFUL CONNECTIONS FOR DATA ANALYSTS</div>
+Google Analytics 4 → traffic, conversions, user behavior
+Google Sheets → any custom data you track manually
+SQL / MySQL / PostgreSQL → direct database queries
+Salesforce → pipeline, revenue, customer data
+HubSpot → marketing and CRM metrics
+Stripe → revenue and subscription data
+</div>
+
+<div class="result-box">
+  <div class="result-label">PRO TIP</div>
+  If your main data lives in a SQL database, use Databox's SQL connector. Write your KPI query once, and Databox runs it automatically on your schedule. Your dashboard always shows the latest numbers without you running anything manually.
+</div>
+
+<h2>Step 2 — Build Your KPI Dashboard</h2>
+<p>Once your data is connected, drag and drop your metrics into a dashboard template. Databox has pre-built templates for most common use cases — sales performance, marketing analytics, financial KPIs — so you don't need to start from scratch.</p>
+
+<div class="step">
+  <div class="step-num">2</div>
+  <div>Use these prompts with Claude to decide what goes on your dashboard before you build it:</div>
+</div>
+
+<div class="prompt-box">
+  <div class="prompt-label">PROMPT FOR CLAUDE — PLAN YOUR DASHBOARD</div>
+I'm building a KPI dashboard for [stakeholder type, e.g. "weekly executive review"].
+
+My available data sources are: [list your sources]
+
+Help me:
+1. Identify the 6-8 most important metrics for this audience
+2. Suggest how to group them (e.g. revenue metrics, operational metrics, leading indicators)
+3. Recommend which metrics should show week-over-week change vs month-over-month
+4. Flag any metrics that are vanity metrics I should avoid
+
+Keep it focused on what drives decisions, not what's easy to measure.
+</div>
+
+<div class="result-box">
+  <div class="result-label">WHAT YOU GET</div>
+  Claude returns a prioritized list of metrics with grouping suggestions in under 30 seconds. This prevents the most common dashboard mistake: including everything you can measure instead of everything that matters.
+</div>
+
+<h2>Step 3 — Set Up Genie, Databox's AI Analyst</h2>
+<p>Databox has a built-in AI feature called Genie that analyzes your dashboard data and generates plain-English summaries. Instead of your stakeholders staring at numbers, Genie tells them what changed and why it matters.</p>
+
+<div class="step">
+  <div class="step-num">3</div>
+  <div>Enable Genie in your dashboard settings and configure it to generate weekly summaries.</div>
+</div>
+
+<div class="result-box">
+  <div class="result-label">WHAT GENIE DOES</div>
+  Genie scans your dashboard metrics, identifies significant changes, and writes a plain-English summary automatically. Your stakeholders get: "Revenue is up 12% this week, driven by a 23% increase in enterprise deals. The conversion rate dropped slightly — worth watching next week." No analyst needed for the summary.
+  <br><br>
+  <a href="https://databox.com/ai-analyst?fp_ref=nm93" target="_blank" style="color:#1a5f9e;font-weight:bold;">Try Databox Genie AI Analyst →</a>
+</div>
+
+<h2>Step 4 — Automate Delivery</h2>
+<p>This is the step that makes everything passive. Schedule your dashboard to be delivered to your stakeholders automatically — they get the report in their inbox without you sending anything.</p>
+
+<div class="step">
+  <div class="step-num">4</div>
+  <div>In Databox, go to Scheduled Reports → New Report → select your dashboard → add recipients → set schedule.</div>
+</div>
+
+<div class="prompt-box">
+  <div class="prompt-label">RECOMMENDED DELIVERY SCHEDULE</div>
+Weekly KPI report → Monday 8:00 AM (stakeholders start the week informed)
+Monthly summary → First Monday of the month
+Daily metrics → Only if stakeholders actively use the numbers daily
+Real-time alerts → For metrics with clear thresholds (e.g. "alert if conversion drops below 2%")
+</div>
+
+<div class="result-box">
+  <div class="result-label">WHAT YOU GET</div>
+  Your stakeholders receive a professional, up-to-date dashboard every Monday morning. You set this up once — it runs every week indefinitely. The time saved compounds: 45 minutes per week × 52 weeks = 39 hours per year returned to your calendar.
+</div>
+
+<p><a class="cta" href="https://databox.com?aff_id=14134623&fp_ref=nm93" target="_blank">Try Databox free — no credit card required</a></p>
+
+<h2>Real Example — Weekly Sales Dashboard</h2>
+<p>Here's a concrete example of what this looks like in practice for a sales analytics dashboard:</p>
+
+<table>
+  <tr>
+    <th>Metric</th>
+    <th>Data source</th>
+    <th>Update frequency</th>
+    <th>Shown as</th>
+  </tr>
+  <tr>
+    <td>Total revenue</td>
+    <td>Salesforce</td>
+    <td>Real-time</td>
+    <td>Number + % vs last week</td>
+  </tr>
+  <tr>
+    <td>New deals closed</td>
+    <td>Salesforce</td>
+    <td>Daily</td>
+    <td>Bar chart by rep</td>
+  </tr>
+  <tr>
+    <td>Pipeline value</td>
+    <td>Salesforce</td>
+    <td>Real-time</td>
+    <td>Number + trend line</td>
+  </tr>
+  <tr>
+    <td>Conversion rate</td>
+    <td>SQL query</td>
+    <td>Daily</td>
+    <td>% + vs target</td>
+  </tr>
+  <tr>
+    <td>Customer acquisition cost</td>
+    <td>Google Sheets</td>
+    <td>Weekly</td>
+    <td>Number + trend</td>
+  </tr>
+</table>
+
+<p>This dashboard took about 2 hours to build. It now delivers itself every Monday to 8 stakeholders. The analyst who built it hasn't touched it in 3 months.</p>
+
+<h2>Databox vs Building Dashboards Manually</h2>
+<table>
+  <tr>
+    <th>Task</th>
+    <th>Manual (Excel/Sheets)</th>
+    <th>Databox</th>
+  </tr>
+  <tr>
+    <td>Update data</td>
+    <td>Manual every week</td>
+    <td>Automatic, real-time</td>
+  </tr>
+  <tr>
+    <td>Send to stakeholders</td>
+    <td>Manual every week</td>
+    <td>Automatic on schedule</td>
+  </tr>
+  <tr>
+    <td>Write the summary</td>
+    <td>Manual every week</td>
+    <td>Genie AI does it automatically</td>
+  </tr>
+  <tr>
+    <td>Time per week (ongoing)</td>
+    <td>45-60 minutes</td>
+    <td>0 minutes</td>
+  </tr>
+  <tr>
+    <td>Setup time</td>
+    <td>0 (but repeats forever)</td>
+    <td>2-3 hours (once)</td>
+  </tr>
+</table>
+
+<div class="verdict">
+  The breakeven point is about 3 weeks. After that, every week is pure time savings — forever.
+</div>
+
+<p><a class="cta" href="https://databox.com?aff_id=14134623&fp_ref=nm93" target="_blank">Try Databox free — no credit card required</a></p>
+<p><a href="https://databox.com/ai-analyst?fp_ref=nm93" target="_blank" style="color:#1a5f9e;font-weight:bold;">Try Databox Genie AI Analyst →</a></p>
+
+<p><a href="/" style="color:#4a90d9;text-decoration:none;font-size:16px;">← Back to all guides</a></p>
+
+</body>
+</html>
