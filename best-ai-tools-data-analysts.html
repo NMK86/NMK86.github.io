@@ -36,11 +36,16 @@
 
 <div style="background:#1a1a2e;color:#e0e0e0;padding:20px;border-radius:10px;margin:20px 0;font-family:monospace;font-size:13px;line-height:1.8;">
   <div style="font-size:11px;color:#4a90d9;font-family:Arial;margin-bottom:12px;font-weight:bold;letter-spacing:.08em;">ANALYST PROMPT — COPY &amp; PASTE INTO JULIUS AI</div>
-  <div style="margin-bottom:6px;"><span style="color:#4a90d9;">TASK:</span> Analyze sales performance by category</div>
-  <div style="margin-bottom:6px;"><span style="color:#4a90d9;">DATA:</span> Monthly sales by product category (or use sample data)</div>
-  <div style="margin-bottom:6px;"><span style="color:#4a90d9;">OUTPUT:</span> Bar chart sorted high to low</div>
-  <div style="margin-bottom:14px;"><span style="color:#4a90d9;">FLAG:</span> Highlight categories more than 20% above average</div>
-  <div style="color:#aaa;font-size:12px;border-top:1px solid #333;padding-top:12px;">"Create a dataset of monthly sales by product category. Show me a bar chart of total annual sales per category, sorted from highest to lowest. Highlight in red any category more than 20% above the average."</div>
+  <div style="margin-bottom:6px;"><span style="color:#4a90d9;">TASK:</span> Analyze quarterly revenue performance vs target for a B2B SaaS company</div>
+  <div style="margin-bottom:6px;"><span style="color:#4a90d9;">DATA:</span> Connect your CSV or database — columns needed: Quarter, Revenue_Actual, Revenue_Target</div>
+  <div style="margin-bottom:6px;"><span style="color:#4a90d9;">OUTPUT:</span> Professional grouped bar chart with variance labels and trend analysis</div>
+  <div style="margin-bottom:16px;"><span style="color:#4a90d9;">FLAG:</span> Highlight quarters where actual deviates more than 5% from target</div>
+  <div style="color:#aaa;font-size:12px;border-top:1px solid #333;padding-top:12px;line-height:2;">
+    <div style="margin-bottom:4px;"><span style="color:#7a8fa6;">1. DATASET</span> — 8 quarters (Q1 2023–Q4 2024) · Revenue $800K–$2.1M · realistic growth · mix of hits and misses</div>
+    <div style="margin-bottom:4px;"><span style="color:#7a8fa6;">2. CALCULATION</span> — Variance_Pct per quarter · flag Above/Below Target · full-year totals 2023 vs 2024</div>
+    <div style="margin-bottom:4px;"><span style="color:#7a8fa6;">3. VISUALIZATION</span> — Grouped bars (green=above, red=below) · variance % labels · dashed average line · title: "Quarterly Revenue Performance vs Target — B2B SaaS"</div>
+    <div><span style="color:#7a8fa6;">4. INSIGHT</span> — Which quarters missed · overall trend · one recommendation · max 3 bullet points</div>
+  </div>
 </div>
 
 <div style="margin:20px 0;">
