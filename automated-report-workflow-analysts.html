@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Automated Report Workflow for Data Analysts — Perplexity + Claude + GetResponse</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #333; }
+    h1 { font-size: 28px; }
+    h2 { font-size: 22px; margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 8px; }
+    .verdict { background: #f5f5f5; padding: 12px 16px; border-left: 4px solid #4a90d9; margin: 16px 0; }
+    .prompt-box { background: #1a1a2e; color: #e0e0e0; padding: 16px; border-radius: 8px; margin: 16px 0; font-family: monospace; font-size: 13px; line-height: 1.6; }
+    .prompt-label { font-size: 11px; color: #4a90d9; font-family: Arial; margin-bottom: 8px; font-weight: bold; letter-spacing: .05em; }
+    .result-box { background: #eaf4ff; padding: 14px 16px; border-radius: 6px; margin: 16px 0; border-left: 3px solid #4a90d9; }
+    .result-label { font-size: 11px; color: #1a5f9e; font-weight: bold; margin-bottom: 6px; letter-spacing: .05em; }
+    .step { display: flex; gap: 14px; margin: 20px 0; align-items: flex-start; }
+    .step-num { background: #4a90d9; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+    .cta { background: #4a90d9; color: white; padding: 14px 24px; text-decoration: none; border-radius: 6px; display: inline-block; margin: 10px 0; }
+    .tool-tag a { display: inline-block; background: #EEEDFE; color: #3C3489; padding: 2px 10px; border-radius: 20px; font-size: 12px; margin: 2px; text-decoration: none; }
+    a { color: #4a90d9; }
+    table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+    th { background: #4a90d9; color: white; padding: 10px 14px; text-align: left; }
+    td { padding: 10px 14px; border-bottom: 1px solid #eee; }
+    tr:nth-child(even) { background: #f9f9f9; }
+  </style>
+</head>
+<body>
+
+<p><a href="/" style="color:#4a90d9;text-decoration:none;font-size:16px;">← Back to all guides</a></p>
+
+<h1>The Automated Report Workflow for Data Analysts</h1>
+<p style="color:#888;font-size:14px;margin-top:-10px;">Perplexity + Claude + GetResponse — from research to stakeholder inbox, automatically</p>
+
+<p style="background:#eaf4ff;padding:12px 16px;border-radius:6px;">Stop sending reports manually. <a href="https://www.getresponse.com?a=w6nKgweWcH" target="_blank" style="color:#1a5f9e;font-weight:bold;">Try GetResponse free for 30 days →</a></p>
+
+<p>Every data analyst has a report they send every week. Same recipients. Same structure. Same manual effort. Here's how to automate the entire workflow — from research to delivery — using three tools that work together seamlessly.</p>
+
+<h2>The Stack</h2>
+<div class="tool-tag">
+  <a href="https://perplexity.ai" target="_blank">Perplexity</a> — real-time research with cited sources<br>
+  <a href="https://claude.ai" target="_blank">Claude</a> — writing the report narrative<br>
+  <a href="https://www.getresponse.com?a=w6nKgweWcH" target="_blank">GetResponse</a> — automated delivery to stakeholders
+</div>
+
+<div class="verdict">
+  This workflow covers everything a recurring report needs: current context, clear writing, and automatic delivery. Set it up once — it runs every week without you.
+</div>
+
+<h2>Step 1 — Use Perplexity to Get Current Context</h2>
+<p>Every report needs context — what's happening in the market, what the benchmarks are, what changed since last week. Perplexity finds this in seconds with cited sources you can verify.</p>
+
+<div class="step">
+  <div class="step-num">1</div>
+  <div>Open Perplexity and use these prompts before writing your report:</div>
+</div>
+
+<div class="prompt-box">
+  <div class="prompt-label">PROMPTS FOR PERPLEXITY — COPY AND USE THESE</div>
+"What are the latest benchmarks for [your key metric] in [your industry] in 2026? Include sources."
+
+"What factors are currently driving [trend relevant to your report] in [industry]? Summarize with sources."
+
+"What changed in [topic] in the last 30 days that would be relevant for a [business type] analyst?"
+</div>
+
+<div class="result-box">
+  <div class="result-label">WHAT YOU GET</div>
+  Cited, current context in under 60 seconds. Instead of spending 45 minutes on Google, you have sourced benchmarks ready to paste into your report. Your stakeholders read reports grounded in current reality — not last quarter's data.
+</div>
+
+<h2>Step 2 — Use Claude to Write the Report</h2>
+<p>With your data and Perplexity context ready, use Claude to write the actual report. The key is giving Claude enough structure so it doesn't write generically.</p>
+
+<div class="step">
+  <div class="step-num">2</div>
+  <div>Paste this prompt into Claude with your actual data filled in:</div>
+</div>
+
+<div class="prompt-box">
+  <div class="prompt-label">MAIN REPORT PROMPT — COPY AND USE THIS</div>
+You are writing a weekly [report type] for [stakeholder type, e.g. "senior management at a retail company"].
+
+Here is this week's data:
+- [Metric 1]: [value] (vs last week: [value], vs target: [value])
+- [Metric 2]: [value] (vs last week: [value], vs target: [value])
+- [Metric 3]: [value] (vs last week: [value], vs target: [value])
+
+Here is relevant market context from this week:
+[paste your Perplexity findings here]
+
+Write a report with:
+1. Subject line (max 8 words, focused on the most important number)
+2. Executive summary (3 sentences max — what happened, why it matters, what to do)
+3. Key metrics section (bullet points, plain language)
+4. One recommendation with expected outcome
+5. One thing to watch next week
+
+Tone: direct and clear. No jargon. Assume the reader has 90 seconds.
+</div>
+
+<div class="result-box">
+  <div class="result-label">WHAT YOU GET</div>
+  A complete, stakeholder-ready report in under 60 seconds. The structure ensures nothing important is missed. The tone instruction ensures it's readable. The subject line is ready to copy directly into your email.
+</div>
+
+<div class="prompt-box">
+  <div class="prompt-label">BONUS PROMPT — FOR THE EXECUTIVE SUMMARY ONLY</div>
+Take these three findings and write a 2-sentence executive summary for a VP who has 30 seconds to read it. Lead with the business impact, not the data. End with one clear action.
+
+Finding 1: [your finding]
+Finding 2: [your finding]
+Finding 3: [your finding]
+</div>
+
+<h2>Step 3 — Automate Delivery with GetResponse</h2>
+<p>This is where the workflow becomes truly passive. Instead of manually sending your report every week, you build the template once in GetResponse and schedule it. The tool sends it automatically — you don't touch anything.</p>
+
+<div class="step">
+  <div class="step-num">3</div>
+  <div>Set up your automated report delivery in GetResponse:</div>
+</div>
+
+<div class="prompt-box">
+  <div class="prompt-label">SETUP STEPS</div>
+1. Create a new email campaign in GetResponse
+2. Build your report template (use Claude's output as the structure)
+3. Add your stakeholders' email addresses to a contact list
+4. Set the automation: "Send every Monday at 8:00 AM"
+5. Connect to your data source if you want dynamic content
+6. Activate — done
+</div>
+
+<div class="result-box">
+  <div class="result-label">WHAT YOU GET</div>
+  Your stakeholders receive a professional report every Monday morning without you sending anything. One setup session (about 90 minutes) saves you 45 minutes every single week — that's 39 hours per year returned to your calendar.
+</div>
+
+<p><a class="cta" href="https://www.getresponse.com?a=w6nKgweWcH" target="_blank">Try GetResponse free for 30 days</a></p>
+
+<h2>The Full Workflow — Time Comparison</h2>
+<table>
+  <tr>
+    <th>Task</th>
+    <th>Manual approach</th>
+    <th>This workflow</th>
+  </tr>
+  <tr>
+    <td>Research and context</td>
+    <td>45 min (Google)</td>
+    <td>2 min (Perplexity)</td>
+  </tr>
+  <tr>
+    <td>Writing the report</td>
+    <td>45 min</td>
+    <td>5 min (Claude)</td>
+  </tr>
+  <tr>
+    <td>Formatting and sending</td>
+    <td>15 min every week</td>
+    <td>0 min (GetResponse)</td>
+  </tr>
+  <tr style="background:#eaf4ff;font-weight:bold;">
+    <td>Total per week (after setup)</td>
+    <td>~105 minutes</td>
+    <td>~7 minutes</td>
+  </tr>
+</table>
+
+<h2>Why This Combination Works</h2>
+<p>Perplexity solves the context problem — your reports reference current reality, not stale data. Claude solves the writing problem — you stop staring at a blank page. GetResponse solves the delivery problem — you stop being the bottleneck between your insights and your stakeholders.</p>
+
+<p>Each tool does one job and does it well. Together, they cover the entire lifecycle of a recurring report.</p>
+
+<div class="verdict">
+  If you send any report more than once, this workflow pays for itself within the first month. Start with the Claude prompt above — you can use it today, before setting up any automation.
+</div>
+
+<p><a class="cta" href="https://www.getresponse.com?a=w6nKgweWcH" target="_blank">Try GetResponse free for 30 days</a></p>
+
+<p><a href="/" style="color:#4a90d9;text-decoration:none;font-size:16px;">← Back to all guides</a></p>
+
+</body>
+</html>
