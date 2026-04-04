@@ -18,7 +18,6 @@
     .cta { background: #4a90d9; color: white; padding: 14px 24px; text-decoration: none; border-radius: 6px; display: inline-block; margin: 10px 0; }
     .tool-tag { display: inline-block; background: #EEEDFE; color: #3C3489; padding: 2px 10px; border-radius: 20px; font-size: 12px; margin: 2px; }
     a { color: #4a90d9; }
-    .screenshot-placeholder { background: #f1efe8; border: 2px dashed #b4b2a9; border-radius: 8px; padding: 40px; text-align: center; color: #888780; margin: 16px 0; font-size: 13px; }
   </style>
 </head>
 <body>
@@ -73,16 +72,27 @@ Keep everything focused on business impact, not technical details.
 
 <div class="step">
   <div class="step-num">2</div>
-  <div>Upload your CSV or Excel file to Julius AI, then use prompts like these:</div>
+  <div>Upload your CSV or Excel file to Julius AI, then use this structured prompt:</div>
 </div>
 
-<div class="prompt-box">
-  <div class="prompt-label">PROMPTS FOR JULIUS AI — COPY AND USE THESE</div>
-"Show me a bar chart of [metric] by [dimension], sorted from highest to lowest. Highlight anything more than 20% above or below average."
+<div style="background:#1a1a2e;color:#e0e0e0;padding:20px;border-radius:10px;margin:20px 0;font-family:monospace;font-size:13px;line-height:1.8;">
+  <div style="font-size:11px;color:#4a90d9;font-family:Arial;margin-bottom:12px;font-weight:bold;letter-spacing:.08em;">ANALYST PROMPT — COPY &amp; PASTE INTO JULIUS AI</div>
+  <div style="margin-bottom:6px;"><span style="color:#4a90d9;">TASK:</span> Analyze customer cohort retention for a SaaS product</div>
+  <div style="margin-bottom:6px;"><span style="color:#4a90d9;">DATA:</span> Connect your CSV or database — columns needed: Cohort_Month, Month_0 through Month_5</div>
+  <div style="margin-bottom:6px;"><span style="color:#4a90d9;">OUTPUT:</span> Cohort retention heatmap with color-coded performance</div>
+  <div style="margin-bottom:16px;"><span style="color:#4a90d9;">FLAG:</span> Highlight cohorts where Month_3 retention drops below 40%</div>
+  <div style="color:#aaa;font-size:12px;border-top:1px solid #333;padding-top:12px;line-height:2;">
+    <div style="margin-bottom:4px;"><span style="color:#7a8fa6;">1. DATASET</span> — 6 monthly cohorts (Jan–Jun 2025) · Month_0 = 100% · realistic retention decline · at least 2 cohorts below 40% at Month_3</div>
+    <div style="margin-bottom:4px;"><span style="color:#7a8fa6;">2. CALCULATION</span> — Retention % per cohort per month · average retention per month · identify best and worst cohort</div>
+    <div style="margin-bottom:4px;"><span style="color:#7a8fa6;">3. VISUALIZATION</span> — Heatmap: rows = cohorts, columns = months · dark green (high) to dark red (low) · % values inside each cell · title: "Customer Cohort Retention Analysis — SaaS 2025"</div>
+    <div><span style="color:#7a8fa6;">4. INSIGHT</span> — Best cohort at Month_3 · overall retention trend · one recommendation · max 3 bullet points</div>
+  </div>
+</div>
 
-"Create a line chart showing [metric] trend over the last 12 months. Add a 3-month moving average line."
-
-"Build a scatter plot of [metric A] vs [metric B] for each [segment]. Color-code by [category]."
+<div style="margin:20px 0;">
+  <p style="font-size:13px;color:#555;margin-bottom:8px;"><strong>Result:</strong> Generated in under 15 seconds — Julius AI identified Feb and Apr 2025 cohorts as underperforming (38% and 35% retention at Month_3), while Mar 2025 was the strongest cohort at 75%.</p>
+  <img src="https://nmk86.github.io/julius-ai-cohort-chart.png" alt="Julius AI cohort retention heatmap — SaaS 2025" style="width:100%;border-radius:8px;border:1px solid #eee;">
+  <p style="font-size:12px;color:#888;margin-top:6px;">Dark green = high retention. Dark red = below 40% threshold (flagged with black border). Mar 2025 cohort is the clear outperformer. No formulas, no drag and drop.</p>
 </div>
 
 <div class="result-box">
