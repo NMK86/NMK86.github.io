@@ -71,27 +71,34 @@ Stripe → revenue and subscription data
 
 <div class="step">
   <div class="step-num">2</div>
-  <div>Use these prompts with Claude to decide what goes on your dashboard before you build it:</div>
+  <div>Use this structured prompt with Julius AI to visualize your KPI performance before building in Databox:</div>
 </div>
 
-<div class="prompt-box">
-  <div class="prompt-label">PROMPT FOR CLAUDE — PLAN YOUR DASHBOARD</div>
-I'm building a KPI dashboard for [stakeholder type, e.g. "weekly executive review"].
-
-My available data sources are: [list your sources]
-
-Help me:
-1. Identify the 6-8 most important metrics for this audience
-2. Suggest how to group them (e.g. revenue metrics, operational metrics, leading indicators)
-3. Recommend which metrics should show week-over-week change vs month-over-month
-4. Flag any metrics that are vanity metrics I should avoid
-
-Keep it focused on what drives decisions, not what's easy to measure.
+<div style="background:#1a1a2e;color:#e0e0e0;padding:20px;border-radius:10px;margin:20px 0;font-family:monospace;font-size:13px;line-height:1.8;">
+  <div style="font-size:11px;color:#4a90d9;font-family:Arial;margin-bottom:12px;font-weight:bold;letter-spacing:.08em;">ANALYST PROMPT — COPY &amp; PASTE INTO JULIUS AI</div>
+  <div style="margin-bottom:6px;"><span style="color:#4a90d9;">TASK:</span> Build a KPI performance scorecard for a B2B SaaS company</div>
+  <div style="margin-bottom:6px;"><span style="color:#4a90d9;">DATA:</span> Connect your CSV or database — columns needed: Metric, Current_Value, Target, Previous_Period</div>
+  <div style="margin-bottom:6px;"><span style="color:#4a90d9;">OUTPUT:</span> Horizontal bar chart showing % of target achieved per KPI</div>
+  <div style="margin-bottom:16px;"><span style="color:#4a90d9;">FLAG:</span> Highlight metrics more than 10% below target in red</div>
+  <div style="color:#aaa;font-size:12px;border-top:1px solid #333;padding-top:12px;line-height:2;">
+    <div style="margin-bottom:4px;"><span style="color:#7a8fa6;">1. DATASET</span> — 8 KPIs: MRR, Churn Rate, NPS, CAC, LTV, Conversion Rate, Active Users, Support Tickets · each with Current_Value and Target</div>
+    <div style="margin-bottom:4px;"><span style="color:#7a8fa6;">2. CALCULATION</span> — Variance % per metric · flag as On Track / At Risk / Off Track · rank best to worst</div>
+    <div style="margin-bottom:4px;"><span style="color:#7a8fa6;">3. VISUALIZATION</span> — Horizontal bars · green (above 90% of target) · yellow (75-90%) · red (below 75%) · vertical line at 100% target · label with actual value and variance % · title: "KPI Performance Dashboard — Q1 2026"</div>
+    <div><span style="color:#7a8fa6;">4. INSIGHT</span> — Top 2 performing metrics · bottom 2 needing attention · one overall recommendation · max 3 bullet points</div>
+  </div>
 </div>
+
+<div style="margin:20px 0;">
+  <p style="font-size:13px;color:#555;margin-bottom:8px;"><strong>Result:</strong> Generated in under 15 seconds — Julius AI identified CAC and MRR as on track, while Churn Rate and Conversion Rate are significantly below target and need immediate attention.</p>
+  <img src="https://nmk86.github.io/julius-ai-kpi-dashboard.png" alt="Julius AI KPI performance dashboard — Q1 2026" style="width:100%;border-radius:8px;border:1px solid #eee;">
+  <p style="font-size:12px;color:#888;margin-top:6px;">Green = on track (above 90% of target). Yellow = at risk (75-90%). Red = off track (below 75%). Use this chart to decide which metrics to feature prominently in your Databox dashboard.</p>
+</div>
+
+<p><a href="https://julius.ai/?via=noam" target="_blank" style="color:#1a5f9e;font-weight:bold;">Try Julius AI free →</a></p>
 
 <div class="result-box">
-  <div class="result-label">WHAT YOU GET</div>
-  Claude returns a prioritized list of metrics with grouping suggestions in under 30 seconds. This prevents the most common dashboard mistake: including everything you can measure instead of everything that matters.
+  <div class="result-label">WHY THIS MATTERS</div>
+  Before building your Databox dashboard, use Julius AI to identify which metrics need the most visibility. Metrics in red should be front and center — not buried in a tab nobody opens.
 </div>
 
 <h2>Step 3 — Set Up Genie, Databox's AI Analyst</h2>
@@ -133,8 +140,6 @@ Real-time alerts → For metrics with clear thresholds (e.g. "alert if conversio
 <p><a class="cta" href="https://databox.com?aff_id=14134623&fp_ref=nm93" target="_blank">Try Databox free — no credit card required</a></p>
 
 <h2>Real Example — Weekly Sales Dashboard</h2>
-<p>Here's a concrete example of what this looks like in practice for a sales analytics dashboard:</p>
-
 <table>
   <tr>
     <th>Metric</th>
@@ -173,8 +178,6 @@ Real-time alerts → For metrics with clear thresholds (e.g. "alert if conversio
     <td>Number + trend</td>
   </tr>
 </table>
-
-<p>This dashboard took about 2 hours to build. It now delivers itself every Monday to 8 stakeholders. The analyst who built it hasn't touched it in 3 months.</p>
 
 <h2>Databox vs Building Dashboards Manually</h2>
 <table>
