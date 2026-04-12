@@ -43,25 +43,20 @@
       white-space: nowrap;
       text-decoration: none;
     }
-    .nav-item {
-      position: relative;
-    }
+    .nav-item { position: relative; }
     .nav-btn {
       background: none;
       border: none;
-      color: #ccc;
+      color: white;
       font-size: 14px;
       padding: 14px 14px;
       cursor: pointer;
       white-space: nowrap;
       font-family: Arial, sans-serif;
-      transition: color 0.2s;
+      transition: opacity 0.2s;
     }
-    .nav-btn:hover { color: white; }
-    .nav-btn::after {
-      content: " ▾";
-      font-size: 11px;
-    }
+    .nav-btn:hover { opacity: 0.8; }
+    .nav-btn::after { content: " ▾"; font-size: 11px; }
     .dropdown {
       display: none;
       position: absolute;
@@ -78,14 +73,15 @@
     .dropdown a {
       display: block;
       padding: 10px 16px;
-      color: #333;
+      color: #4a90d9;
+      font-weight: bold;
       text-decoration: none;
       font-size: 13px;
       border-bottom: 1px solid #f5f5f5;
       transition: background 0.15s;
     }
     .dropdown a:last-child { border-bottom: none; }
-    .dropdown a:hover { background: #f5f5f5; }
+    .dropdown a:hover { background: #f0f7ff; }
     .dropdown-header {
       padding: 8px 16px 4px;
       font-size: 11px;
@@ -94,19 +90,13 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
-    .dropdown a.affiliate {
-      color: #1a5f9e;
-      font-weight: bold;
-    }
-    .dropdown a.affiliate::after {
-      content: " →";
-    }
+    .dropdown a.affiliate::after { content: " →"; }
   </style>
 </head>
 <body>
 
 <nav>
-  <a href="/" class="nav-brand">AI for Analysts</a>
+  <a href="/" class="nav-brand">AI Tools for Data Analysts</a>
 
   <div class="nav-item">
     <button class="nav-btn">All Guides</button>
