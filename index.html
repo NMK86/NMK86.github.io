@@ -7,14 +7,13 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-LMW74M7HST');
   </script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Tools for Data Analysts — Honest Reviews</title>
   <style>
+    * { box-sizing: border-box; }
     body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #333; }
     h1 { font-size: 28px; }
     p.intro { font-size: 17px; color: #555; }
@@ -23,9 +22,127 @@
     .card p { color: #555; margin: 8px 0 16px; }
     .card a { background: #4a90d9; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; display: inline-block; }
     footer { margin-top: 60px; color: #aaa; font-size: 13px; border-top: 1px solid #eee; padding-top: 20px; }
+
+    /* NAV */
+    nav {
+      background: #1a1a2e;
+      margin: -20px -20px 30px -20px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      position: relative;
+      z-index: 100;
+    }
+    .nav-brand {
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      padding: 14px 12px 14px 0;
+      margin-right: 8px;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    .nav-item {
+      position: relative;
+    }
+    .nav-btn {
+      background: none;
+      border: none;
+      color: #ccc;
+      font-size: 14px;
+      padding: 14px 14px;
+      cursor: pointer;
+      white-space: nowrap;
+      font-family: Arial, sans-serif;
+      transition: color 0.2s;
+    }
+    .nav-btn:hover { color: white; }
+    .nav-btn::after {
+      content: " ▾";
+      font-size: 11px;
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      min-width: 280px;
+      z-index: 200;
+    }
+    .nav-item:hover .dropdown { display: block; }
+    .dropdown a {
+      display: block;
+      padding: 10px 16px;
+      color: #333;
+      text-decoration: none;
+      font-size: 13px;
+      border-bottom: 1px solid #f5f5f5;
+      transition: background 0.15s;
+    }
+    .dropdown a:last-child { border-bottom: none; }
+    .dropdown a:hover { background: #f5f5f5; }
+    .dropdown-header {
+      padding: 8px 16px 4px;
+      font-size: 11px;
+      font-weight: bold;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .dropdown a.affiliate {
+      color: #1a5f9e;
+      font-weight: bold;
+    }
+    .dropdown a.affiliate::after {
+      content: " →";
+    }
   </style>
 </head>
 <body>
+
+<nav>
+  <a href="/" class="nav-brand">AI for Analysts</a>
+
+  <div class="nav-item">
+    <button class="nav-btn">All Guides</button>
+    <div class="dropdown">
+      <div class="dropdown-header">Reviews & Comparisons</div>
+      <a href="/best-ai-tools-data-analysts.html">Best AI Tools for Data Analysts in 2026</a>
+      <a href="/chatgpt-vs-claude-data-analysis.html">ChatGPT vs Claude for Data Analysis</a>
+      <a href="/getresponse-vs-activecampaign-data-reports.html">GetResponse vs ActiveCampaign</a>
+      <div class="dropdown-header">Practical Guides</div>
+      <a href="/save-time-ai-data-analysts.html">Save 10 Hours a Week with AI</a>
+      <a href="/ai-data-analysis-reports.html">Write Better Data Reports with AI</a>
+      <a href="/perplexity-ai-data-research.html">Use Perplexity for Data Research</a>
+      <a href="/best-ai-tools-data-presentations.html">Best AI Tools for Presentations</a>
+      <div class="dropdown-header">Workflows & Stacks</div>
+      <a href="/ai-analytics-stack-data-analysts.html">The Complete AI Analytics Stack</a>
+      <a href="/automated-report-workflow-analysts.html">The Automated Report Workflow</a>
+      <a href="/databox-automated-kpi-dashboard.html">Automated KPI Dashboards with Databox</a>
+    </div>
+  </div>
+
+  <div class="nav-item">
+    <button class="nav-btn">AI Tools</button>
+    <div class="dropdown">
+      <div class="dropdown-header">Recommended Tools</div>
+      <a href="https://julius.ai/?via=noam" target="_blank" class="affiliate" onclick="gtag('event','affiliate_click',{'tool':'julius','location':'nav'});">Julius AI — Chart generation</a>
+      <a href="https://www.getresponse.com?a=w6nKgweWcH" target="_blank" class="affiliate" onclick="gtag('event','affiliate_click',{'tool':'getresponse','location':'nav'});">GetResponse — Automate reports</a>
+      <a href="https://databox.com?aff_id=14134623&fp_ref=nm93" target="_blank" class="affiliate" onclick="gtag('event','affiliate_click',{'tool':'databox','location':'nav'});">Databox — KPI dashboards</a>
+      <a href="https://databox.com/ai-analyst?fp_ref=nm93" target="_blank" class="affiliate" onclick="gtag('event','affiliate_click',{'tool':'databox_genie','location':'nav'});">Databox Genie — AI analyst</a>
+      <div class="dropdown-header">Free Tools</div>
+      <a href="https://claude.ai" target="_blank">Claude — Analysis & writing</a>
+      <a href="https://perplexity.ai" target="_blank">Perplexity — Research</a>
+      <a href="https://chatgpt.com" target="_blank">ChatGPT — Code & SQL</a>
+    </div>
+  </div>
+
+</nav>
 
 <h1>AI Tools for Data Analysts</h1>
 <p class="intro">Honest reviews and practical guides from a data analyst with 8 years of experience. No hype — just what actually works.</p>
