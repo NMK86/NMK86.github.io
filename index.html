@@ -20,7 +20,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Tools for Data Analysts — Honest Reviews</title>
-<meta name="description" content="Honest AI tool reviews for data analysts. Practical guides on Julius AI, Databox, GetResponse and more — from an analyst with 8 years of experience.">
+  <meta name="description" content="Honest AI tool reviews for data analysts. Practical guides on Julius AI, Databox, GetResponse and more — from an analyst with 8 years of experience.">
   <style>
     * { box-sizing: border-box; }
     body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #333; }
@@ -31,6 +31,60 @@
     .card p { color: #555; margin: 8px 0 16px; }
     .card a { background: #4a90d9; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; display: inline-block; }
     footer { margin-top: 60px; color: #aaa; font-size: 13px; border-top: 1px solid #eee; padding-top: 20px; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #1a5f9e 0%, #4a90d9 100%);
+      color: white;
+      padding: 48px 32px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+    .hero h1 {
+      font-size: 34px;
+      color: white;
+      margin: 0 0 12px;
+      line-height: 1.3;
+    }
+    .hero p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.88);
+      margin: 0 0 24px;
+      max-width: 560px;
+    }
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .hero-stat {
+      background: rgba(255,255,255,0.15);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+      color: white;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: white;
+      color: #1a5f9e;
+      font-weight: bold;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 15px;
+      margin-right: 12px;
+    }
+    .hero-cta:hover { opacity: 0.9; }
+    .hero-secondary {
+      display: inline-block;
+      color: rgba(255,255,255,0.85);
+      font-size: 14px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
 
     /* NAV */
     nav {
@@ -43,62 +97,17 @@
       position: relative;
       z-index: 100;
     }
-    .nav-brand {
-      color: white;
-      font-weight: bold;
-      font-size: 15px;
-      padding: 14px 12px 14px 0;
-      margin-right: 8px;
-      white-space: nowrap;
-      text-decoration: none;
-    }
+    .nav-brand { color: white; font-weight: bold; font-size: 15px; padding: 14px 12px 14px 0; margin-right: 8px; white-space: nowrap; text-decoration: none; }
     .nav-item { position: relative; }
-    .nav-btn {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 14px;
-      padding: 14px 14px;
-      cursor: pointer;
-      white-space: nowrap;
-      font-family: Arial, sans-serif;
-      transition: opacity 0.2s;
-    }
+    .nav-btn { background: none; border: none; color: white; font-size: 14px; padding: 14px 14px; cursor: pointer; white-space: nowrap; font-family: Arial, sans-serif; transition: opacity 0.2s; }
     .nav-btn:hover { opacity: 0.8; }
     .nav-btn::after { content: " ▾"; font-size: 11px; }
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: white;
-      border: 1px solid #e0e0e0;
-      border-radius: 6px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-      min-width: 280px;
-      z-index: 200;
-    }
+    .dropdown { display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #e0e0e0; border-radius: 6px; box-shadow: 0 4px 16px rgba(0,0,0,0.12); min-width: 280px; z-index: 200; }
     .nav-item:hover .dropdown { display: block; }
-    nav .dropdown a {
-      display: block;
-      padding: 10px 16px;
-      color: #4a90d9;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 13px;
-      border-bottom: 1px solid #f5f5f5;
-      transition: background 0.15s;
-    }
+    nav .dropdown a { display: block; padding: 10px 16px; color: #4a90d9; font-weight: bold; text-decoration: none; font-size: 13px; border-bottom: 1px solid #f5f5f5; transition: background 0.15s; }
     nav .dropdown a:last-child { border-bottom: none; }
     nav .dropdown a:hover { background: #f0f7ff; }
-    .dropdown-header {
-      padding: 8px 16px 4px;
-      font-size: 11px;
-      font-weight: bold;
-      color: #999;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
+    .dropdown-header { padding: 8px 16px 4px; font-size: 11px; font-weight: bold; color: #999; text-transform: uppercase; letter-spacing: 0.05em; }
     nav .dropdown a.affiliate::after { content: " →"; }
   </style>
 </head>
@@ -106,7 +115,6 @@
 
 <nav>
   <a href="/" class="nav-brand">AI Tools for Data Analysts</a>
-
   <div class="nav-item">
     <button class="nav-btn">All Guides</button>
     <div class="dropdown">
@@ -125,60 +133,53 @@
       <a href="/databox-automated-kpi-dashboard.html">Automated KPI Dashboards with Databox</a>
     </div>
   </div>
-
   <div class="nav-item">
     <button class="nav-btn">AI Tools</button>
     <div class="dropdown">
       <div class="dropdown-header">Recommended Tools</div>
-      <a href="https://julius.ai/?via=noam" target="_blank" class="affiliate" onclick="gtag('event','affiliate_click',{'tool':'julius','location':'nav'});">Julius AI — Chart generation</a>
-      <a href="https://www.getresponse.com?a=w6nKgweWcH" target="_blank" class="affiliate" onclick="gtag('event','affiliate_click',{'tool':'getresponse','location':'nav'});">GetResponse — Automate reports</a>
-      <a href="https://databox.com?aff_id=14134623&fp_ref=nm93" target="_blank" class="affiliate" onclick="gtag('event','affiliate_click',{'tool':'databox','location':'nav'});">Databox — KPI dashboards</a>
-      <a href="https://databox.com/ai-analyst?fp_ref=nm93" target="_blank" class="affiliate" onclick="gtag('event','affiliate_click',{'tool':'databox_genie','location':'nav'});">Databox Genie — AI analyst</a>
+      <a href="https://julius.ai/?via=noam" target="_blank" class="affiliate">Julius AI — Chart generation</a>
+      <a href="https://www.getresponse.com?a=w6nKgweWcH" target="_blank" class="affiliate">GetResponse — Automate reports</a>
+      <a href="https://databox.com?aff_id=14134623&fp_ref=nm93" target="_blank" class="affiliate">Databox — KPI dashboards</a>
+      <a href="https://databox.com/ai-analyst?fp_ref=nm93" target="_blank" class="affiliate">Databox Genie — AI analyst</a>
       <div class="dropdown-header">Free Tools</div>
       <a href="https://claude.ai" target="_blank">Claude — Analysis & writing</a>
       <a href="https://perplexity.ai" target="_blank">Perplexity — Research</a>
       <a href="https://chatgpt.com" target="_blank">ChatGPT — Code & SQL</a>
     </div>
   </div>
-
 </nav>
 
-<h1>AI Tools for Data Analysts</h1>
-<p class="intro">Honest reviews and practical guides from a data analyst with 8 years of experience. No hype — just what actually works.</p>
-<div style="background:#eaf4ff;border:1px solid #b8d9f5;border-radius:8px;padding:24px;margin:20px 0;">
-  
-  <!-- TOP (FULL WIDTH HEADER) -->
-  <div style="text-align:center;max-width:600px;margin:0 auto 28px;">
-    <p style="font-size:28px; line-height:1.3;font-weight:bold;color:#1a5f9e;margin:0 0 12px;">
-      Get 5 Free AI Prompts for Data Analysts
-    </p>
-    <p style="font-size:19px; line-height:1.6;color:#555;margin:0;">
-      Join analysts who save hours every week with AI tools.
-    </p>
+<!-- HERO -->
+<div class="hero">
+  <h1>Save 10 Hours a Week with the Right AI Stack</h1>
+  <p>Honest reviews from a data analyst with 8 years of experience. No hype — just what actually works in real analyst workflows.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">✓ 10 practical guides</div>
+    <div class="hero-stat">✓ Copy-paste prompts</div>
+    <div class="hero-stat">✓ Real workflow examples</div>
+    <div class="hero-stat">✓ No hype</div>
   </div>
-
-  <!-- BOTTOM (2 COLUMNS) -->
-  <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;">
-    
-    <!-- LEFT: FORM -->
-    <div style="flex:1;min-width:240px;">
-      <getresponse-form form-id="9533d7d1-64b1-45eb-a78b-b22b6ac08648" e="1"></getresponse-form>
-    </div>
-
-    <!-- RIGHT: BENEFITS -->
-    <div style="flex:1;min-width:240px;">
-      <p style="font-size:16px;font-weight:bold;color:#1a5f9e;margin:0 0 10px;text-transform:uppercase;letter-spacing:0.05em;">
-        What you get:
-      </p>
-      <p style="font-size:17px; line-height:1.7;color:#444;margin:0 0 14px;">✓ Copy-paste ready — use today</p>
-      <p style="font-size:17px; line-height:1.7;color:#444;margin:0 0 14px;">✓ Works with Julius AI, Claude & ChatGPT</p>
-      <p style="font-size:17px; line-height:1.7;color:#444;margin:0 0 14px;">✓ Tested in real analyst workflows</p>
-      <p style="font-size:15px; line-height:1.6;color:#444;margin:0;">✓ From an analyst with 8 years experience</p>
-    </div>
-
-  </div>
-
+  <a href="/free-prompts.html" class="hero-cta">Get 5 Free AI Prompts →</a>
+  <a href="/best-ai-tools-data-analysts.html" class="hero-secondary">Read the honest review</a>
 </div>
+
+<!-- EMAIL SIGNUP -->
+<div style="background:#eaf4ff;border:1px solid #b8d9f5;border-radius:8px;padding:24px;margin:20px 0;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;">
+  <div style="flex:1;min-width:220px;">
+    <p style="font-size:20px;font-weight:bold;color:#1a5f9e;margin:0 0 6px;">Get 5 Free AI Prompts for Data Analysts</p>
+    <p style="font-size:15px;color:#555;margin:0 0 14px;">Join analysts who save hours every week with AI tools.</p>
+    <getresponse-form form-id="9533d7d1-64b1-45eb-a78b-b22b6ac08648" e="1"></getresponse-form>
+  </div>
+  <div style="flex:1;min-width:180px;padding-top:4px;">
+    <p style="font-size:13px;font-weight:bold;color:#1a5f9e;margin:0 0 10px;text-transform:uppercase;letter-spacing:0.05em;">What you get:</p>
+    <p style="font-size:13px;color:#444;margin:0 0 8px;">✓ Tested in real analyst workflows</p>
+    <p style="font-size:13px;color:#444;margin:0 0 8px;">✓ Copy-paste ready — use today</p>
+    <p style="font-size:13px;color:#444;margin:0 0 8px;">✓ Works with Julius AI, Claude & ChatGPT</p>
+    <p style="font-size:13px;color:#444;margin:0 0 8px;">✓ From an analyst with 8 years experience</p>
+  </div>
+</div>
+
+<h2 style="font-size:20px;margin:32px 0 8px;color:#333;">Latest Guides</h2>
 
 <div class="card">
   <h2>Best AI Tools for Data Analysts in 2026 (Honest Review)</h2>
