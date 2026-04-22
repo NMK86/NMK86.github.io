@@ -36,6 +36,9 @@
     .badge-roi { background: #e8fff0; color: #1a7f3c; }
     .badge-automation { background: #fff3e0; color: #e65100; }
     .badge-research { background: #f3e8ff; color: #6a1a9e; }
+    .tools-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    @media (max-width: 700px) { .tools-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 400px) { .tools-grid { grid-template-columns: 1fr; } }
     nav { background: #4a90d9; margin: -20px -20px 30px -20px; padding: 0 20px; display: flex; align-items: center; gap: 4px; position: relative; z-index: 100; }
     .nav-brand { color: white; font-weight: bold; font-size: 15px; padding: 14px 12px 14px 0; margin-right: 8px; white-space: nowrap; text-decoration: none; }
     .nav-item { position: relative; }
@@ -101,7 +104,7 @@
 <div style="background:#f8f9fa;border:1px solid #e0e0e0;border-radius:10px;padding:28px;margin:24px 0;">
   <h2 style="font-size:20px;margin-top:0;color:#1a5f9e;">Top Recommended Tools</h2>
   <p style="color:#555;font-size:14px;margin-bottom:20px;">Tested in real analyst workflows. These are the tools I use and recommend.</p>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+  <div class="tools-grid">
 
     <div style="background:white;border:1px solid #e0e0e0;border-radius:8px;padding:16px;">
       <span class="tool-badge badge-charts">⭐ Best for Charts</span>
