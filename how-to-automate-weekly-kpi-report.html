@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LMW74M7HST"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LMW74M7HST');
+  </script>
+  <!-- GetResponse Analytics -->
+  <script type="text/javascript">
+  (function(m, o, n, t, e, r, _){
+  m['__GetResponseAnalyticsObject'] = e;m[e] = m[e] || function() {(m[e].q = m[e].q || []).push(arguments)};
+  r = o.createElement(n);_ = o.getElementsByTagName(n)[0];r.async = 1;r.src = t;r.setAttribute('crossorigin', 'use-credentials');_.parentNode.insertBefore(r, _);
+  })(window, document, 'script', 'https://an.gr-wcon.com/script/996c7861-8072-434f-8cb0-23beae0f84e0/ga.js', 'GrTracking');
+  </script>
+  <!-- End GetResponse Analytics -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Automate Your Weekly KPI Report — A Guide for Data Analysts</title>
+  <meta name="description" content="Stop sending the same KPI report manually every week. Here's how data analysts automate weekly reports with Databox and GetResponse — set it up once, runs forever.">
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; max-width: 960px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #333; }
+    h1 { font-size: 28px; }
+    h2 { font-size: 22px; margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 8px; }
+    .verdict { background: #f5f5f5; padding: 12px 16px; border-left: 4px solid #4a90d9; margin: 16px 0; }
+    .example { background: #eaf4ff; padding: 12px 16px; border-radius: 6px; margin: 16px 0; }
+    .example strong { display: block; margin-bottom: 6px; color: #1a5f9e; }
+    .step { display: flex; gap: 14px; margin: 20px 0; align-items: flex-start; }
+    .step-num { background: #4a90d9; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+    .prompt-box { background: #1a1a2e; color: #e0e0e0; padding: 16px; border-radius: 8px; margin: 16px 0; font-family: monospace; font-size: 13px; line-height: 1.6; }
+    .prompt-label { font-size: 11px; color: #4a90d9; font-family: Arial; margin-bottom: 8px; font-weight: bold; letter-spacing: .05em; }
+    .result-box { background: #eaf4ff; padding: 14px 16px; border-radius: 6px; margin: 16px 0; border-left: 3px solid #4a90d9; }
+    .result-label { font-size: 11px; color: #1a5f9e; font-weight: bold; margin-bottom: 6px; letter-spacing: .05em; }
+    table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+    th { background: #4a90d9; color: white; padding: 10px 14px; text-align: left; }
+    td { padding: 10px 14px; border-bottom: 1px solid #eee; }
+    tr:nth-child(even) { background: #f9f9f9; }
+    .recommended { background: #eaf4ff; }
+    .cta { background: #4a90d9; color: white; padding: 14px 24px; text-decoration: none; border-radius: 6px; display: inline-block; margin: 10px 0; }
+    a { color: #4a90d9; }
+    .faq-item { margin: 20px 0; border-left: 3px solid #4a90d9; padding-left: 16px; }
+    .faq-q { font-weight: bold; color: #1a5f9e; margin-bottom: 6px; }
+    .internal-link { background: #f5f5f5; padding: 10px 14px; border-radius: 6px; margin: 12px 0; font-size: 14px; }
+    nav { background: #4a90d9; margin: -20px -20px 30px -20px; padding: 0 20px; display: flex; align-items: center; gap: 4px; position: relative; z-index: 100; }
+    .nav-brand { color: white; font-weight: bold; font-size: 15px; padding: 14px 12px 14px 0; margin-right: 8px; white-space: nowrap; text-decoration: none; }
+    .nav-item { position: relative; }
+    .nav-btn { background: none; border: none; color: white; font-size: 14px; padding: 14px 14px; cursor: pointer; white-space: nowrap; font-family: Arial, sans-serif; transition: opacity 0.2s; }
+    .nav-btn:hover { opacity: 0.8; }
+    .nav-btn::after { content: " ▾"; font-size: 11px; }
+    .dropdown { display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #e0e0e0; border-radius: 6px; box-shadow: 0 4px 16px rgba(0,0,0,0.12); min-width: 280px; z-index: 200; }
+    .nav-item:hover .dropdown { display: block; }
+    nav .dropdown a { display: block; padding: 10px 16px; color: #4a90d9; font-weight: bold; text-decoration: none; font-size: 13px; border-bottom: 1px solid #f5f5f5; transition: background 0.15s; }
+    nav .dropdown a:last-child { border-bottom: none; }
+    nav .dropdown a:hover { background: #f0f7ff; }
+    .dropdown-header { padding: 8px 16px 4px; font-size: 11px; font-weight: bold; color: #999; text-transform: uppercase; letter-spacing: 0.05em; }
+    nav .dropdown a.affiliate::after { content: " →"; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-brand">AI Tools for Data Analysts</a>
+  <div class="nav-item">
+    <button class="nav-btn">All Guides</button>
+    <div class="dropdown">
+      <div class="dropdown-header">Reviews & Comparisons</div>
+      <a href="/best-ai-tools-data-analysts.html">Best AI Tools for Data Analysts in 2026</a>
+      <a href="/julius-ai-review-2026.html">Julius AI Review 2026</a>
+      <a href="/julius-ai-vs-claude-data-analysis.html">Julius AI vs Claude for Data Analysis</a>
+      <a href="/chatgpt-vs-claude-data-analysis.html">ChatGPT vs Claude for Data Analysis</a>
+      <a href="/getresponse-vs-activecampaign-data-reports.html">GetResponse vs ActiveCampaign</a>
+      <div class="dropdown-header">Practical Guides</div>
+      <a href="/how-to-automate-weekly-kpi-report.html">Automate Your Weekly KPI Report</a>
+      <a href="/how-to-generate-charts-without-code.html">Generate Charts Without Code</a>
+      <a href="/save-time-ai-data-analysts.html">Save 10 Hours a Week with AI</a>
+      <a href="/ai-data-analysis-reports.html">Write Better Data Reports with AI</a>
+      <a href="/perplexity-ai-data-research.html">Use Perplexity for Data Research</a>
+      <a href="/best-ai-tools-data-presentations.html">Best AI Tools for Presentations</a>
+      <div class="dropdown-header">Workflows & Stacks</div>
+      <a href="/ai-analytics-stack-data-analysts.html">The Complete AI Analytics Stack</a>
+      <a href="/automated-report-workflow-analysts.html">The Automated Report Workflow</a>
+      <a href="/databox-automated-kpi-dashboard.html">Automated KPI Dashboards with Databox</a>
+    </div>
+  </div>
+  <div class="nav-item">
+    <button class="nav-btn">AI Tools</button>
+    <div class="dropdown">
+      <div class="dropdown-header">Recommended Tools</div>
+      <a href="https://julius.ai/?via=noam" target="_blank" class="affiliate">Julius AI — Chart generation</a>
+      <a href="https://www.getresponse.com?a=w6nKgweWcH" target="_blank" class="affiliate">GetResponse — Automate reports</a>
+      <a href="https://databox.com?aff_id=14134623&fp_ref=nm93" target="_blank" class="affiliate">Databox — KPI dashboards</a>
+      <a href="https://databox.com/ai-analyst?fp_ref=nm93" target="_blank" class="affiliate">Databox Genie — AI analyst</a>
+      <a href="https://manus.im/invitation/SMVIYQYHOHRS?utm_source=invitation&utm_medium=social&utm_campaign=copy_link" target="_blank" class="affiliate">Manus AI — Autonomous research</a>
+      <div class="dropdown-header">Free Tools</div>
+      <a href="https://claude.ai" target="_blank">Claude — Analysis & writing</a>
+      <a href="https://perplexity.ai" target="_blank">Perplexity — Research</a>
+      <a href="https://chatgpt.com" target="_blank">ChatGPT — Code & SQL</a>
+      <a href="https://manus.im/invitation/SMVIYQYHOHRS?utm_source=invitation&utm_medium=social&utm_campaign=copy_link" target="_blank">Manus AI — Autonomous research</a>
+    </div>
+  </div>
+</nav>
+
+<p><a href="/" style="color:#4a90d9;text-decoration:none;font-size:16px;">← Back to all guides</a></p>
+
+<h1>How to Automate Your Weekly KPI Report</h1>
+<p style="color:#888;font-size:14px;margin-top:-10px;">Stop sending the same report manually every Monday. Set it up once — it runs forever.</p>
+
+<p>If you're a data analyst, you probably send a weekly KPI report to the same people every week. Same structure, same recipients, same manual effort — just different numbers. It's one of the biggest time drains in the job, and it's completely avoidable.</p>
+
+<p>Here's the exact setup I use to automate weekly KPI reports end-to-end — from data to stakeholder inbox — without touching anything after the initial setup.</p>
+
+<h2>The Problem with Manual Weekly Reports</h2>
+
+<table>
+  <tr>
+    <th>Task</th>
+    <th>Manual every week</th>
+    <th>Automated (after setup)</th>
+  </tr>
+  <tr>
+    <td>Pull the data</td>
+    <td>15-20 min</td>
+    <td class="recommended">0 min — Databox pulls automatically</td>
+  </tr>
+  <tr>
+    <td>Update the dashboard</td>
+    <td>15-20 min</td>
+    <td class="recommended">0 min — updates in real time</td>
+  </tr>
+  <tr>
+    <td>Write the summary</td>
+    <td>20-30 min</td>
+    <td class="recommended">0 min — Genie AI writes it</td>
+  </tr>
+  <tr>
+    <td>Send to stakeholders</td>
+    <td>10 min</td>
+    <td class="recommended">0 min — GetResponse sends automatically</td>
+  </tr>
+  <tr style="background:#eaf4ff;font-weight:bold;">
+    <td>Total per week</td>
+    <td>60-80 min</td>
+    <td>0 min</td>
+  </tr>
+</table>
+
+<p>That's 60-80 minutes every week, forever — versus a one-time setup of about 3 hours. The breakeven point is less than three weeks.</p>
+
+<h2>The Two-Tool Setup</h2>
+
+<p><strong>Databox</strong> — connects to your data sources, builds the live dashboard, and generates an AI summary automatically. Your KPIs update in real time without you touching anything.</p>
+
+<p><strong>GetResponse</strong> — sends the report email to your stakeholders on whatever schedule you set. Monday 8am, every week, automatically.</p>
+
+<div class="verdict">
+  Together: Databox handles the data. GetResponse handles the delivery. You handle nothing — after the setup.
+</div>
+
+<h2>Step 1 — Connect Your Data to Databox</h2>
+
+<div class="step">
+  <div class="step-num">1</div>
+  <div>Create a free Databox account and connect your data sources.</div>
+</div>
+
+<div class="prompt-box">
+  <div class="prompt-label">MOST USEFUL CONNECTIONS FOR WEEKLY KPI REPORTS</div>
+Google Analytics 4 → traffic, conversions, user behavior
+Google Sheets → any custom KPIs you track manually
+Salesforce → pipeline, revenue, deals closed
+HubSpot → marketing metrics, lead volume
+SQL / MySQL / PostgreSQL → any custom database query
+Stripe → revenue, MRR, churn
+</div>
+
+<div class="result-box">
+  <div class="result-label">PRO TIP</div>
+  If your KPIs live in a spreadsheet, connect Google Sheets directly. Update the sheet once — Databox picks it up automatically. No SQL needed.
+</div>
+
+<p><a class="cta" href="https://databox.com?aff_id=14134623&fp_ref=nm93" target="_blank">Try Databox free — Connect your first data source in under 10 minutes</a></p>
+
+<h2>Step 2 — Build Your KPI Dashboard Once</h2>
+
+<div class="step">
+  <div class="step-num">2</div>
+  <div>Use a Databox template or build your dashboard from scratch. Drag and drop your key metrics — you only do this once.</div>
+</div>
+
+<p>Before building, use Claude to figure out which metrics actually belong in a weekly report. Most analysts include too many numbers — stakeholders only need the ones that drive decisions.</p>
+
+<div class="prompt-box">
+  <div class="prompt-label">PROMPT FOR CLAUDE — USE THIS BEFORE BUILDING YOUR DASHBOARD</div>
+I send a weekly KPI report to [stakeholder type, e.g. "VP of Sales and 3 regional managers"].
+
+My available data: [list your data sources and metrics]
+
+Help me:
+1. Identify the 5-6 most important metrics for this audience
+2. Remove any vanity metrics that don't drive decisions
+3. Suggest how to group them (revenue / operational / leading indicators)
+4. Recommend which metrics need a week-over-week comparison vs a trend line
+
+Focus on what helps them make decisions — not what looks impressive.
+</div>
+
+<div class="result-box">
+  <div class="result-label">WHAT YOU GET</div>
+  A focused metric list before you build anything. Most analysts build dashboards with 15+ metrics — Claude will cut it to the 5-6 that actually matter. Your stakeholders will read a focused report. They ignore everything else.
+</div>
+
+<h2>Step 3 — Enable Databox Genie for Automatic Summaries</h2>
+
+<div class="step">
+  <div class="step-num">3</div>
+  <div>Turn on Genie in your dashboard settings. It automatically writes a plain-English summary of what changed and why it matters.</div>
+</div>
+
+<p>Genie scans your metrics, identifies significant changes week-over-week, and writes a summary your stakeholders can actually understand. Instead of:</p>
+
+<p><em>"MRR: $47,200 (+8.3% WoW). Churn: 2.1% (-0.4pp). CAC: $312 (+$18)."</em></p>
+
+<p>They get:</p>
+
+<p><em>"Revenue grew 8% this week, the strongest week in Q2. Churn improved slightly. Customer acquisition cost ticked up — worth watching if it continues next week."</em></p>
+
+<div class="result-box">
+  <div class="result-label">WHAT YOU GET</div>
+  A written summary that requires zero effort from you — generated automatically every week before the report goes out.
+  <br><br>
+  <a href="https://databox.com/ai-analyst?fp_ref=nm93" target="_blank" style="color:#1a5f9e;font-weight:bold;">Try Databox Genie — Get automatic AI summaries of your KPIs</a>
+</div>
+
+<h2>Step 4 — Set Up Automated Delivery with GetResponse</h2>
+
+<div class="step">
+  <div class="step-num">4</div>
+  <div>Build your report email template in GetResponse and schedule it. This is the last manual step you'll ever do for this report.</div>
+</div>
+
+<div class="prompt-box">
+  <div class="prompt-label">PROMPT FOR CLAUDE — BUILD YOUR EMAIL TEMPLATE</div>
+Write a weekly KPI report email template for [stakeholder type].
+
+The email should include:
+1. Subject line (max 8 words, focused on the most important number)
+2. Opening sentence — what week this covers
+3. Key metrics section — [list your 5-6 metrics] with placeholders for values and WoW change
+4. One-sentence highlight — the most important change this week
+5. One thing to watch next week
+6. Sign-off
+
+Tone: direct, no jargon, assume 60 seconds to read.
+Format: plain text that works in any email client.
+</div>
+
+<div class="prompt-box">
+  <div class="prompt-label">GETRESPONSE SETUP — 5 STEPS</div>
+1. Create a new campaign in GetResponse
+2. Paste your Claude template as the email body
+3. Replace text placeholders with dynamic content or Databox screenshot
+4. Add your stakeholders to a contact list
+5. Set schedule: every Monday at 8:00 AM
+→ Done. Never touch it again.
+</div>
+
+<p><a class="cta" href="https://www.getresponse.com?a=w6nKgweWcH" target="_blank">Try GetResponse free — Set up your first automated report in under 2 hours</a></p>
+
+<h2>The Full Workflow — One-Time Setup</h2>
+
+<table>
+  <tr>
+    <th>Step</th>
+    <th>Tool</th>
+    <th>One-time effort</th>
+    <th>Ongoing effort</th>
+  </tr>
+  <tr>
+    <td>Connect data sources</td>
+    <td>Databox</td>
+    <td>30-60 min</td>
+    <td class="recommended">0 min</td>
+  </tr>
+  <tr>
+    <td>Build dashboard</td>
+    <td>Databox + Claude</td>
+    <td>60-90 min</td>
+    <td class="recommended">0 min</td>
+  </tr>
+  <tr>
+    <td>Enable AI summary</td>
+    <td>Databox Genie</td>
+    <td>5 min</td>
+    <td class="recommended">0 min</td>
+  </tr>
+  <tr>
+    <td>Build email template</td>
+    <td>GetResponse + Claude</td>
+    <td>30-60 min</td>
+    <td class="recommended">0 min</td>
+  </tr>
+  <tr style="background:#eaf4ff;font-weight:bold;">
+    <td>Total</td>
+    <td>—</td>
+    <td>~3 hours (once)</td>
+    <td>0 min/week forever</td>
+  </tr>
+</table>
+
+<div class="verdict">
+  Three hours once versus 60 minutes every week forever. If you've been sending this report for 6 months, you've already spent 25+ hours on it. Three hours to automate it is the best ROI in your workflow.
+</div>
+
+<h2>Real Example — What This Looks Like</h2>
+
+<div class="example">
+  <strong>My setup for a SaaS client:</strong>
+  Data sources: Salesforce + Google Analytics + Google Sheets (for custom metrics)
+  Dashboard: 6 metrics — MRR, New Deals, Churn Rate, Website Conversions, CAC, NPS
+  Recipients: VP of Sales, VP of Marketing, CEO — 3 people
+  Schedule: Every Monday at 7:30 AM
+
+  Setup time: 2.5 hours on a Tuesday afternoon.
+  Time saved: 45 minutes every Monday since then.
+  Months running: 4 months without touching anything.
+  Total hours saved: ~12 hours and counting.
+</div>
+
+<div class="internal-link">
+  🔧 Want a deeper guide on building Databox dashboards? Read: <a href="/databox-automated-kpi-dashboard.html">How Data Analysts Can Use Databox to Build Automated KPI Dashboards</a>
+</div>
+
+<div class="internal-link">
+  ⚡ Want the full automated report workflow with Perplexity + Claude + GetResponse? Read: <a href="/automated-report-workflow-analysts.html">The Automated Report Workflow for Data Analysts</a>
+</div>
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+  <div class="faq-q">How long does it take to set up an automated weekly KPI report?</div>
+  <p>About 3 hours for the full setup — connecting data sources, building the dashboard, and configuring the email automation. After that, it runs every week without any input from you.</p>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">What data sources can Databox connect to?</div>
+  <p>Databox connects to 70+ data sources including Google Analytics, Salesforce, HubSpot, Google Sheets, SQL databases, Stripe, and more. If your KPIs live in a spreadsheet, you can connect Google Sheets directly — no SQL required. <a href="https://databox.com?aff_id=14134623&fp_ref=nm93" target="_blank">Try Databox free</a></p>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">Can I automate the written summary too — not just the numbers?</div>
+  <p>Yes — Databox Genie automatically generates a plain-English summary of your KPI changes every week. It identifies what changed, by how much, and flags anything worth watching. Your stakeholders get numbers and context without you writing anything. <a href="https://databox.com/ai-analyst?fp_ref=nm93" target="_blank">Try Databox Genie</a></p>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">Why use GetResponse instead of just scheduling from Databox?</div>
+  <p>Databox can send reports, but GetResponse gives you more control over the email format, subject lines, and recipient management. If you want a polished, branded weekly email rather than a standard dashboard export, GetResponse is the better delivery tool. <a href="https://www.getresponse.com?a=w6nKgweWcH" target="_blank">Try GetResponse free</a></p>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">How much does this setup cost?</div>
+  <p>Both Databox and GetResponse have free tiers. Databox's free plan supports up to 3 data sources — enough for a basic weekly report. GetResponse's free trial runs for 30 days. For most analysts, the paid plans ($15-37/month combined) pay for themselves within the first two weeks of time saved.</p>
+</div>
+
+<div style="background:#eaf4ff;border:1px solid #b8d9f5;border-radius:8px;padding:24px;margin:20px 0;">
+  <div style="text-align:center;max-width:600px;margin:0 auto 28px;">
+    <p style="font-size:28px;line-height:1.3;font-weight:bold;color:#1a5f9e;margin:0 0 12px;">
+      Get 5 Free AI Prompts for Data Analysts
+    </p>
+    <p style="font-size:19px;line-height:1.6;color:#555;margin:0;">
+      Join analysts who save hours every week with AI tools.
+    </p>
+  </div>
+  <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;">
+    <div style="flex:1;min-width:240px;">
+      <getresponse-form form-id="9533d7d1-64b1-45eb-a78b-b22b6ac08648" e="1"></getresponse-form>
+    </div>
+    <div style="flex:1;min-width:240px;">
+      <p style="font-size:16px;font-weight:bold;color:#1a5f9e;margin:0 0 10px;text-transform:uppercase;letter-spacing:0.05em;">What you get:</p>
+      <p style="font-size:17px;line-height:1.7;color:#444;margin:0 0 14px;">✓ Copy-paste ready — use today</p>
+      <p style="font-size:17px;line-height:1.7;color:#444;margin:0 0 14px;">✓ Works with Julius AI, Claude & ChatGPT</p>
+      <p style="font-size:17px;line-height:1.7;color:#444;margin:0 0 14px;">✓ Tested in real analyst workflows</p>
+      <p style="font-size:15px;line-height:1.6;color:#444;margin:0;">✓ From an analyst with 8 years experience</p>
+    </div>
+  </div>
+</div>
+
+<p style="font-size:13px;color:#888;">⭐ Some links may be affiliate links.</p>
+<p><a href="/" style="color:#4a90d9;text-decoration:none;font-size:16px;">← Back to all guides</a></p>
+
+</body>
+</html>
