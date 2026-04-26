@@ -30,6 +30,7 @@
     .card h2 { font-size: 20px; margin-top: 0; }
     .card p { color: #555; margin: 8px 0 16px; }
     .card a { background: #4a90d9; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; display: inline-block; }
+    .card.featured { border: 2px solid #4a90d9; background: #f0f7ff; }
     footer { margin-top: 60px; color: #aaa; font-size: 13px; border-top: 1px solid #eee; padding-top: 20px; }
     .tool-badge { display: inline-block; font-size: 11px; font-weight: bold; padding: 3px 10px; border-radius: 20px; margin-bottom: 8px; }
     .badge-charts { background: #e8f4ff; color: #1a5f9e; }
@@ -39,6 +40,11 @@
     .tools-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
     @media (max-width: 700px) { .tools-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 400px) { .tools-grid { grid-template-columns: 1fr; } }
+    .featured-comparison { background: #1a5f9e; color: white; border-radius: 10px; padding: 28px; margin: 24px 0; text-align: center; }
+    .featured-comparison h2 { color: white; font-size: 22px; margin-top: 0; border: none; }
+    .featured-comparison p { color: #b8d9f5; font-size: 16px; margin-bottom: 20px; }
+    .featured-comparison a { background: white; color: #1a5f9e; padding: 12px 28px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 15px; display: inline-block; }
+    .featured-comparison a:hover { background: #eaf4ff; }
     nav { background: #4a90d9; margin: -20px -20px 30px -20px; padding: 0 20px; display: flex; align-items: center; gap: 4px; position: relative; z-index: 100; }
     .nav-brand { color: white; font-weight: bold; font-size: 15px; padding: 14px 12px 14px 0; margin-right: 8px; white-space: nowrap; text-decoration: none; }
     .nav-item { position: relative; }
@@ -52,6 +58,8 @@
     nav .dropdown a:hover { background: #f0f7ff; }
     .dropdown-header { padding: 8px 16px 4px; font-size: 11px; font-weight: bold; color: #999; text-transform: uppercase; letter-spacing: 0.05em; }
     nav .dropdown a.affiliate::after { content: " →"; }
+    .nav-link { color: white; text-decoration: none; font-size: 14px; padding: 14px 14px; white-space: nowrap; }
+    .nav-link:hover { opacity: 0.8; }
   </style>
 </head>
 <body>
@@ -69,7 +77,6 @@
       <a href="/chatgpt-vs-claude-data-analysis.html">ChatGPT vs Claude for Data Analysis</a>
       <a href="/getresponse-vs-activecampaign-data-reports.html">GetResponse vs ActiveCampaign</a>
       <div class="dropdown-header">Practical Guides</div>
-      <a href="/free-prompts.html">Free AI Prompts for Data Analysts</a>
       <a href="/how-to-automate-weekly-kpi-report.html">Automate Your Weekly KPI Report</a>
       <a href="/how-to-generate-charts-without-code.html">Generate Charts Without Code</a>
       <a href="/save-time-ai-data-analysts.html">Save 10 Hours a Week with AI</a>
@@ -98,11 +105,13 @@
       <a href="https://manus.im/invitation/SMVIYQYHOHRS?utm_source=invitation&utm_medium=social&utm_campaign=copy_link" target="_blank">Manus AI — Autonomous research</a>
     </div>
   </div>
+  <a href="/blog.html" class="nav-link">Blog</a>
 </nav>
 
 <h1>AI Tools for Data Analysts</h1>
 <p class="intro">Honest reviews and practical guides from a data analyst with 8 years of experience. No hype — just what actually works.</p>
 
+<!-- FEATURED COMPARISON -->
 <div style="background:#fff3e0;border:1px solid #ffe0b2;border-radius:10px;padding:24px;margin:24px 0;">
   <h2 style="margin-top:0;">🔥 Most Popular Comparison</h2>
   <p style="color:#555;">Not sure whether to use Julius AI or Claude? This is the most common question for data analysts.</p>
@@ -116,7 +125,6 @@
   <h2 style="font-size:20px;margin-top:0;color:#1a5f9e;">Top Recommended Tools</h2>
   <p style="color:#555;font-size:14px;margin-bottom:20px;">Tested in real analyst workflows. These are the tools I use and recommend.</p>
   <div class="tools-grid">
-
     <div style="background:white;border:1px solid #e0e0e0;border-radius:8px;padding:16px;display:flex;flex-direction:column;">
       <div style="flex:1;">
         <span class="tool-badge badge-charts">⭐ Best for Charts</span>
@@ -126,7 +134,6 @@
       </div>
       <a href="https://julius.ai/?via=noam" target="_blank" onclick="gtag('event','affiliate_click',{'tool':'julius','location':'featured'});" style="background:#4a90d9;color:white;padding:8px 16px;text-decoration:none;border-radius:6px;font-size:13px;display:inline-block;margin-top:auto;">Try free →</a>
     </div>
-
     <div style="background:white;border:1px solid #e0e0e0;border-radius:8px;padding:16px;display:flex;flex-direction:column;">
       <div style="flex:1;">
         <span class="tool-badge badge-roi">📊 Best ROI</span>
@@ -136,7 +143,6 @@
       </div>
       <a href="https://databox.com?aff_id=14134623&fp_ref=nm93" target="_blank" onclick="gtag('event','affiliate_click',{'tool':'databox','location':'featured'});" style="background:#4a90d9;color:white;padding:8px 16px;text-decoration:none;border-radius:6px;font-size:13px;display:inline-block;margin-top:auto;">Try free →</a>
     </div>
-
     <div style="background:white;border:1px solid #e0e0e0;border-radius:8px;padding:16px;display:flex;flex-direction:column;">
       <div style="flex:1;">
         <span class="tool-badge badge-automation">⚡ Best Automation</span>
@@ -146,7 +152,6 @@
       </div>
       <a href="https://www.getresponse.com?a=w6nKgweWcH" target="_blank" onclick="gtag('event','affiliate_click',{'tool':'getresponse','location':'featured'});" style="background:#4a90d9;color:white;padding:8px 16px;text-decoration:none;border-radius:6px;font-size:13px;display:inline-block;margin-top:auto;">Try free →</a>
     </div>
-
     <div style="background:white;border:1px solid #e0e0e0;border-radius:8px;padding:16px;display:flex;flex-direction:column;">
       <div style="flex:1;">
         <span class="tool-badge badge-research">🤖 Autonomous Research</span>
@@ -156,7 +161,6 @@
       </div>
       <a href="https://manus.im/invitation/SMVIYQYHOHRS?utm_source=invitation&utm_medium=social&utm_campaign=copy_link" target="_blank" style="background:#4a90d9;color:white;padding:8px 16px;text-decoration:none;border-radius:6px;font-size:13px;display:inline-block;margin-top:auto;">Try free →</a>
     </div>
-
   </div>
 </div>
 
@@ -206,12 +210,8 @@
 <!-- EMAIL SIGNUP -->
 <div style="background:#eaf4ff;border:1px solid #b8d9f5;border-radius:8px;padding:24px;margin:20px 0;">
   <div style="text-align:center;max-width:600px;margin:0 auto 28px;">
-    <p style="font-size:28px;line-height:1.3;font-weight:bold;color:#1a5f9e;margin:0 0 12px;">
-      Get 5 Free AI Prompts for Data Analysts
-    </p>
-    <p style="font-size:19px;line-height:1.6;color:#555;margin:0;">
-      Join analysts who save hours every week with AI tools.
-    </p>
+    <p style="font-size:28px;line-height:1.3;font-weight:bold;color:#1a5f9e;margin:0 0 12px;">Get 5 Free AI Prompts for Data Analysts</p>
+    <p style="font-size:19px;line-height:1.6;color:#555;margin:0;">Join analysts who save hours every week with AI tools.</p>
   </div>
   <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;">
     <div style="flex:1;min-width:240px;">
@@ -233,23 +233,43 @@
   <p style="font-size:14px;color:#555;margin:0;">Every tool on this site has been tested in real analyst workflows — not just demos. I've been a data analyst for 8 years. I only recommend tools I actually use or have tested hands-on. No sponsored content, no vendor relationships.</p>
 </div>
 
-<!-- ARTICLE CARDS -->
-<div class="card">
+<!-- FEATURED ARTICLES -->
+<h2 style="font-size:20px;color:#333;border-bottom:2px solid #eee;padding-bottom:8px;margin-top:40px;">Featured Guides</h2>
+
+<div class="card featured">
   <h2>Julius AI Alternatives — Best Tools for Data Analysts</h2>
-  <p>Looking for alternatives? Compare the best tools for charts, automation, research, and more.</p>
-  <a href="/julius-ai-alternatives-data-analysts.html">See alternatives →</a>
+  <p>Not sure Julius AI is right for you? Here are the best alternatives and exactly when to use each one.</p>
+  <a href="/julius-ai-alternatives-data-analysts.html">Read the guide →</a>
 </div>
 
 <div class="card">
-  <h2>Best AI Tools for Data Analysts in 2026 (Honest Review)</h2>
+  <h2>Julius AI Review 2026 — Is It Worth It?</h2>
+  <p>Honest review after months of daily use. What it does well, where it falls short, and whether the paid plan is worth it.</p>
+  <a href="/julius-ai-review-2026.html">Read the review →</a>
+</div>
+
+<div class="card">
+  <h2>Julius AI vs Claude for Data Analysis</h2>
+  <p>They look similar but do completely different things. Here's exactly when to use each one.</p>
+  <a href="/julius-ai-vs-claude-data-analysis.html">Read the comparison →</a>
+</div>
+
+<div class="card">
+  <h2>Best AI Tools for Data Analysts in 2026</h2>
   <p>I tested 5 AI tools in my daily work as a data analyst. Here's what's worth your time — and what isn't.</p>
   <a href="/best-ai-tools-data-analysts.html">Read the review →</a>
 </div>
 
 <div class="card">
-  <h2>How to Use AI to Write Better Data Analysis Reports</h2>
-  <p>Writing reports used to take me half a day. With this AI workflow, it takes 45 minutes. Step-by-step guide inside.</p>
-  <a href="/ai-data-analysis-reports.html">Read the guide →</a>
+  <h2>How to Automate Your Weekly KPI Report</h2>
+  <p>Stop sending the same report manually every Monday. Set it up once — it runs forever.</p>
+  <a href="/how-to-automate-weekly-kpi-report.html">Read the guide →</a>
+</div>
+
+<div class="card">
+  <h2>How to Generate Charts from Data Without Writing Code</h2>
+  <p>Stop spending 20 minutes on a chart that should take 20 seconds. No Python, no formulas required.</p>
+  <a href="/how-to-generate-charts-without-code.html">Read the guide →</a>
 </div>
 
 <div class="card">
@@ -259,76 +279,14 @@
 </div>
 
 <div class="card">
-  <h2>How to Automate Your Weekly KPI Report</h2>
-  <p>Stop sending the same report manually every Monday. Set it up once with Databox and GetResponse — it runs forever without you touching anything.</p>
-  <a href="/how-to-automate-weekly-kpi-report.html">Read the guide →</a>
-</div>
-
-<div class="card">
-  <h2>How to Generate Charts from Data Without Writing Code</h2>
-  <p>Stop spending 20 minutes on a chart that should take 20 seconds. Here's how analysts generate presentation-ready charts instantly — no Python, no formulas.</p>
-  <a href="/how-to-generate-charts-without-code.html">Read the guide →</a>
-</div>
-
-<div class="card">
-  <h2>Julius AI Review 2026 — Is It Worth It for Data Analysts?</h2>
-  <p>Honest review after months of daily use. What it does well, where it falls short, and whether the paid plan is worth it.</p>
-  <a href="/julius-ai-review-2026.html">Read the review →</a>
-</div>
-
-<div class="card">
-  <h2>Julius AI vs Claude for Data Analysis — Which One Should You Use?</h2>
-  <p>They look similar but do completely different things. Here's exactly when to use each one, with real examples from a working data analyst.</p>
-  <a href="/julius-ai-vs-claude-data-analysis.html">Read the comparison →</a>
-</div>
-
-<div class="card">
-  <h2>Claude for Data Analysis — What It Can (and Can’t) Do</h2>
-  <p>Can Claude actually analyze data? Here's what it does well — and where it falls short for analysts.</p>
-  <a href="/claude-for-data-analysis.html">Read the guide →</a>
-</div>
-
-<div class="card">
-  <h2>ChatGPT vs Claude for Data Analysis — Which One Should You Use?</h2>
-  <p>I use both every day. Here's an honest comparison of which tool wins for each task — with real examples from my workflow.</p>
-  <a href="/chatgpt-vs-claude-data-analysis.html">Read the comparison →</a>
-</div>
-
-<div class="card">
-  <h2>How to Use Perplexity AI for Data Research (A Practical Guide)</h2>
-  <p>Stop spending an hour on Google for every research task. Perplexity gives you cited answers in seconds — here's exactly how to use it.</p>
-  <a href="/perplexity-ai-data-research.html">Read the guide →</a>
-</div>
-
-<div class="card">
-  <h2>Best AI Tools for Creating Data Presentations in 2026</h2>
-  <p>The analysis takes 2 hours. The slides take 3. Here's how to flip that ratio using AI tools that do the heavy lifting for you.</p>
-  <a href="/best-ai-tools-data-presentations.html">Read the guide →</a>
-</div>
-
-<div class="card">
-  <h2>GetResponse vs ActiveCampaign for Data Reports</h2>
-  <p>Both tools automate your report delivery — but they're built for different needs. Here's an honest comparison to help you choose.</p>
-  <a href="/getresponse-vs-activecampaign-data-reports.html">Read the comparison →</a>
-</div>
-
-<div class="card">
   <h2>The Complete AI Analytics Stack for Data Analysts</h2>
-  <p>Claude + Julius AI + Databox — a workflow with exact prompts that replaces 4 hours of work with 45 minutes.</p>
+  <p>Claude + Julius AI + Databox — a workflow that replaces 4 hours of work with 45 minutes.</p>
   <a href="/ai-analytics-stack-data-analysts.html">Read the guide →</a>
 </div>
 
-<div class="card">
-  <h2>The Automated Report Workflow for Data Analysts</h2>
-  <p>Perplexity + Claude + GetResponse — from research to stakeholder inbox, automatically. Exact prompts included.</p>
-  <a href="/automated-report-workflow-analysts.html">Read the guide →</a>
-</div>
-
-<div class="card">
-  <h2>How Data Analysts Can Use Databox to Build Automated KPI Dashboards</h2>
-  <p>Build your KPI dashboard once — Databox updates it automatically and delivers it to your stakeholders every week without you touching anything.</p>
-  <a href="/databox-automated-kpi-dashboard.html">Read the guide →</a>
-</div>
+<p style="text-align:center;margin-top:32px;">
+  <a href="/blog.html" style="background:#f8f9fa;border:1px solid #e0e0e0;color:#4a90d9;padding:12px 28px;text-decoration:none;border-radius:6px;font-weight:bold;font-size:15px;">View all articles →</a>
+</p>
 
 <footer>
   Practical AI guides for data professionals. Updated regularly.
