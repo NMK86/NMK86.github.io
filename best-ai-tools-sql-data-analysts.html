@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best AI Tools for SQL Data Analysts in 2026 — Tested & Ranked</title>
+  <meta name="description" content="Tested by a data analyst with 8 years of experience: the best AI tools to write SQL faster, explain queries, and visualize results — with honest pros, cons, and pricing." />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LMW74M7HST"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LMW74M7HST');
+  </script>
+
+  <!-- GetResponse Web Connect -->
+  <script>
+    (function(m, o, n, t, e, r, _){
+      m['__GetResponseAnalyticsObject'] = e;
+      m[e] = m[e] || function() {(m[e].q = m[e].q || []).push(arguments)};
+      r = o.createElement(n);
+      _ = o.getElementsByTagName(n)[0];
+      r.async = 1;
+      r.src = t;
+      r.setAttribute('crossorigin', 'use-credentials');
+      _.parentNode.insertBefore(r, _);
+    })(window, document, 'script', 'https://ga.getresponse.com/script/b5a12c98-5e8f-4c31-bcbb-ad8f86dfb9da/ga.js', 'GrTracking');
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Georgia, serif; font-size: 18px; line-height: 1.7; color: #222; background: #fff; }
+    nav { background: #4a90d9; padding: 14px 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    nav a { color: #fff; text-decoration: none; font-size: 15px; font-family: Arial, sans-serif; }
+    nav a:hover { text-decoration: underline; }
+    .nav-brand { font-weight: bold; font-size: 17px; margin-right: 16px; }
+    .nav-group { position: relative; display: inline-block; }
+    .nav-group > span { color: #fff; font-size: 15px; font-family: Arial, sans-serif; cursor: pointer; padding: 4px 8px; }
+    .nav-group:hover .dropdown { display: block; }
+    .dropdown { display: none; position: absolute; top: 100%; left: 0; background: #fff; border: 1px solid #ddd; min-width: 240px; z-index: 999; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+    .dropdown a { display: block; padding: 9px 14px; color: #333; font-size: 14px; font-family: Arial, sans-serif; text-decoration: none; }
+    .dropdown a:hover { background: #f0f4ff; }
+    .dropdown .section-label { padding: 8px 14px 4px; font-size: 12px; font-family: Arial, sans-serif; color: #888; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 40px 20px 60px; }
+    .back-link { display: inline-block; margin-bottom: 24px; color: #4a90d9; font-family: Arial, sans-serif; font-size: 15px; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+
+    h1 { font-size: 2em; line-height: 1.25; margin-bottom: 10px; }
+    .subtitle { font-size: 1em; color: #555; margin-bottom: 28px; font-family: Arial, sans-serif; }
+    h2 { font-size: 1.45em; margin-top: 44px; margin-bottom: 14px; }
+    h3 { font-size: 1.15em; margin-top: 28px; margin-bottom: 10px; }
+    p { margin-bottom: 16px; }
+    ul, ol { margin: 0 0 16px 24px; }
+    li { margin-bottom: 8px; }
+    a { color: #4a90d9; }
+    a:hover { text-decoration: underline; }
+
+    .verdict-box { background: #f0f7ff; border-left: 4px solid #4a90d9; padding: 18px 22px; margin: 28px 0; border-radius: 4px; }
+    .verdict-box p { margin-bottom: 8px; }
+    .verdict-box p:last-child { margin-bottom: 0; }
+
+    .cta-button { display: inline-block; background: #4a90d9; color: #fff; padding: 12px 26px; border-radius: 4px; text-decoration: none; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; margin: 8px 0; }
+    .cta-button:hover { background: #357abd; text-decoration: none; color: #fff; }
+
+    table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 0.95em; font-family: Arial, sans-serif; }
+    th { background: #4a90d9; color: #fff; padding: 10px 12px; text-align: left; }
+    td { padding: 10px 12px; border-bottom: 1px solid #e0e0e0; vertical-align: top; }
+    tr:nth-child(even) td { background: #f8f9fb; }
+
+    .tool-card { border: 1px solid #dde3ee; border-radius: 6px; padding: 24px; margin: 28px 0; }
+    .tool-card h3 { margin-top: 0; font-size: 1.2em; }
+    .tool-meta { font-family: Arial, sans-serif; font-size: 14px; color: #555; margin-bottom: 12px; }
+    .pros-cons { display: flex; gap: 24px; margin-top: 14px; flex-wrap: wrap; }
+    .pros, .cons { flex: 1; min-width: 180px; }
+    .pros strong { color: #2e7d32; }
+    .cons strong { color: #c62828; }
+
+    .faq-item { border-top: 1px solid #e0e0e0; padding: 18px 0; }
+    .faq-item:last-child { border-bottom: 1px solid #e0e0e0; }
+    .faq-item summary { font-weight: bold; font-family: Arial, sans-serif; cursor: pointer; font-size: 1em; }
+    .faq-item p { margin-top: 10px; margin-bottom: 0; }
+
+    .email-box { background: #f0f7ff; border: 1px solid #c5d9f0; border-radius: 6px; padding: 28px; margin: 44px 0; text-align: center; }
+    .email-box h3 { margin-top: 0; margin-bottom: 8px; font-size: 1.2em; }
+    .email-box p { font-size: 0.95em; color: #444; margin-bottom: 16px; }
+    .email-box ul { text-align: left; display: inline-block; margin-bottom: 20px; }
+    .gr-form { margin-top: 0; }
+
+    .affiliate-note { font-size: 0.85em; color: #888; font-family: Arial, sans-serif; margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://nmk86.github.io/" class="nav-brand">AI Tools for Data Analysts</a>
+
+  <div class="nav-group">
+    <span>All Guides ▾</span>
+    <div class="dropdown">
+      <div class="section-label">Reviews &amp; Comparisons</div>
+      <a href="https://nmk86.github.io/best-ai-tools-data-analysts.html">Best AI Tools for Data Analysts in 2026</a>
+      <a href="https://nmk86.github.io/julius-ai-alternatives-data-analysts.html">Julius AI Alternatives</a>
+      <a href="https://nmk86.github.io/julius-ai-review-2026.html">Julius AI Review 2026</a>
+      <a href="https://nmk86.github.io/julius-ai-vs-claude-data-analysis.html">Julius AI vs Claude for Data Analysis</a>
+      <a href="https://nmk86.github.io/chatgpt-vs-claude-data-analysis.html">ChatGPT vs Claude for Data Analysis</a>
+      <a href="https://nmk86.github.io/getresponse-vs-activecampaign-data-reports.html">GetResponse vs ActiveCampaign</a>
+      <div class="section-label">Practical Guides</div>
+      <a href="https://nmk86.github.io/how-to-automate-weekly-kpi-report.html">Automate Your Weekly KPI Report</a>
+      <a href="https://nmk86.github.io/how-to-generate-charts-without-code.html">Generate Charts Without Code</a>
+      <a href="https://nmk86.github.io/save-time-ai-data-analysts.html">Save 10 Hours a Week with AI</a>
+      <a href="https://nmk86.github.io/ai-data-analysis-reports.html">Write Better Data Reports with AI</a>
+      <a href="https://nmk86.github.io/perplexity-ai-data-research.html">Use Perplexity for Data Research</a>
+      <a href="https://nmk86.github.io/best-ai-tools-data-presentations.html">Best AI Tools for Presentations</a>
+      <div class="section-label">Workflows &amp; Stacks</div>
+      <a href="https://nmk86.github.io/ai-analytics-stack-data-analysts.html">The Complete AI Analytics Stack</a>
+      <a href="https://nmk86.github.io/automated-report-workflow-analysts.html">The Automated Report Workflow</a>
+      <a href="https://nmk86.github.io/databox-automated-kpi-dashboard.html">Automated KPI Dashboards with Databox</a>
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <span>AI Tools ▾</span>
+    <div class="dropdown">
+      <div class="section-label">Recommended Tools</div>
+      <a href="https://julius.ai/?via=noam">Julius AI — Chart generation</a>
+      <a href="https://www.getresponse.com?a=w6nKgweWcH">GetResponse — Automate reports</a>
+      <a href="https://databox.com?aff_id=14134623&amp;fp_ref=nm93">Databox — KPI dashboards</a>
+      <a href="https://databox.com/ai-analyst?fp_ref=nm93">Databox Genie — AI analyst</a>
+      <a href="https://manus.im/invitation/SMVIYQYHOHRS?utm_source=invitation&utm_medium=social&utm_campaign=copy_link">Manus AI — Autonomous research</a>
+      <div class="section-label">Free Tools</div>
+      <a href="https://claude.ai">Claude — Analysis &amp; writing</a>
+      <a href="https://perplexity.ai">Perplexity — Research</a>
+      <a href="https://chatgpt.com">ChatGPT — Code &amp; SQL</a>
+      <a href="https://manus.im/invitation/SMVIYQYHOHRS?utm_source=invitation&utm_medium=social&utm_campaign=copy_link">Manus AI — Autonomous research</a>
+    </div>
+  </div>
+
+  <a href="https://nmk86.github.io/blog.html">Blog</a>
+</nav>
+
+<!-- CONTENT -->
+<div class="container">
+
+  <a href="https://nmk86.github.io/" class="back-link">← Back to all guides</a>
+
+  <h1>Best AI Tools for SQL Data Analysts in 2026</h1>
+  <p class="subtitle">Tested by a data analyst with 8 years of experience. No sponsored content.</p>
+
+  <div class="verdict-box">
+    <p><strong>Quick verdict:</strong> The best AI tool for SQL depends on what stage of the workflow you're in. ChatGPT and Claude are strong for writing and debugging queries. Julius AI is the clear winner when you need to visualize the results without writing more code. This guide covers exactly when to use each one.</p>
+    <p>👉 <a class="cta-button" href="https://julius.ai/?via=noam">Try Julius AI Free — Visualize Your SQL Results</a></p>
+  </div>
+
+  <h2>Why SQL Analysts Need AI Tools in 2026</h2>
+  <p>SQL has been the core skill of data analysts for decades — and it's not going anywhere. But the way analysts use SQL is changing fast. AI tools now handle the parts that used to eat up the most time: writing boilerplate queries from scratch, debugging syntax errors, explaining complex joins to non-technical stakeholders, and turning query results into presentable charts.</p>
+  <p>I've been working as a data analyst for 8 years. I've tested every major AI tool against real SQL workflows — not toy examples. Here's what actually works, what doesn't, and which tool belongs at which stage of your workflow.</p>
+
+  <h2>The 3 Stages Where SQL Analysts Use AI</h2>
+  <p>Before ranking tools, it helps to be clear about what SQL analysts actually need AI for:</p>
+  <ol>
+    <li><strong>Writing queries</strong> — generating SQL from a plain English description of what you need</li>
+    <li><strong>Debugging &amp; explaining</strong> — finding errors, optimizing slow queries, explaining logic to others</li>
+    <li><strong>Visualizing results</strong> — turning the output table into a chart or dashboard without switching tools</li>
+  </ol>
+  <p>No single tool dominates all three stages equally. The best setup is knowing which tool to reach for at each step.</p>
+
+  <h2>The Best AI Tools for SQL Analysts — Ranked</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Tool</th>
+        <th>Best For</th>
+        <th>Price</th>
+        <th>Affiliate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>⭐ <strong>Julius AI</strong></td>
+        <td>Visualizing SQL results — charts from your output in seconds</td>
+        <td>Free / ~$20/mo</td>
+        <td><a href="https://julius.ai/?via=noam">Try free →</a></td>
+      </tr>
+      <tr>
+        <td>ChatGPT</td>
+        <td>Writing &amp; debugging SQL — best free option for query generation</td>
+        <td>Free / $20/mo</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Claude</td>
+        <td>Explaining queries, rewriting logic, writing narrative around results</td>
+        <td>Free / $20/mo</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>⭐ <strong>Databox</strong></td>
+        <td>Turning recurring SQL reports into automated dashboards</td>
+        <td>Free / $37/mo</td>
+        <td><a href="https://databox.com?aff_id=14134623&fp_ref=nm93">Try free →</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- JULIUS AI -->
+  <div class="tool-card">
+    <h3>⭐ 1. Julius AI — Best for Visualizing SQL Results</h3>
+    <div class="tool-meta">Price: Free tier available · Paid from ~$20/month · Affiliate link below</div>
+    <p>Julius AI is purpose-built for data analysts. You paste your SQL output — or upload the CSV export from your query — and describe the chart you want in plain English. It generates a clean, exportable chart in seconds.</p>
+    <p>This is where Julius AI has no real competition: the jump from SQL results to a presentation-ready chart. Analysts who know SQL well often still spend 15–20 minutes building a chart in Excel after running their query. Julius replaces that step entirely.</p>
+    <p><strong>Real example:</strong> I ran a cohort retention query — output was a week × cohort matrix. I uploaded the CSV and typed: "Create a heatmap showing retention by cohort week, darker = higher retention." It generated a clean heatmap in about 25 seconds. Exported to PNG. Done.</p>
+    <p>Julius also understands aggregated SQL output well. You don't have to reshape the data — it figures out the right chart type from the structure of the table.</p>
+    <div class="pros-cons">
+      <div class="pros">
+        <strong>✅ Pros</strong>
+        <ul>
+          <li>Fastest path from SQL output to chart</li>
+          <li>No reformatting required — paste and go</li>
+          <li>Clean, exportable PNG outputs</li>
+          <li>Free tier to test before paying</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <strong>❌ Cons</strong>
+        <ul>
+          <li>Doesn't write or debug SQL directly</li>
+          <li>Free tier message limits hit quickly in daily use</li>
+          <li>Not a BI tool — no live data connections on lower plans</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:16px;"><strong>Best for:</strong> Analysts who run queries regularly and need to turn results into charts for reports or stakeholder presentations.</p>
+    <p><a class="cta-button" href="https://julius.ai/?via=noam">Try Julius AI Free →</a></p>
+  </div>
+
+  <!-- CHATGPT -->
+  <div class="tool-card">
+    <h3>2. ChatGPT — Best for Writing &amp; Debugging SQL</h3>
+    <div class="tool-meta">Price: Free / $20 per month (Plus) · No affiliate</div>
+    <p>ChatGPT is still the strongest general-purpose tool for writing SQL from a natural language description. You describe what you need — "give me monthly active users by region, excluding test accounts, for the last 6 months" — and it writes the query.</p>
+    <p>It handles most SQL dialects (BigQuery, PostgreSQL, MySQL, Redshift, Snowflake) and does a good job of adapting syntax when you specify which database you're using.</p>
+    <p>For debugging, ChatGPT is reliable for common errors — wrong JOIN type, missing GROUP BY, ambiguous column references. It explains what went wrong and rewrites the query cleanly.</p>
+    <div class="pros-cons">
+      <div class="pros">
+        <strong>✅ Pros</strong>
+        <ul>
+          <li>Strong at generating SQL from plain English</li>
+          <li>Handles multiple SQL dialects</li>
+          <li>Good at debugging and explaining errors</li>
+          <li>Free tier is genuinely useful</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <strong>❌ Cons</strong>
+        <ul>
+          <li>Can't connect to your actual database</li>
+          <li>Occasional hallucinations on complex schema logic</li>
+          <li>No visualization — results stay as text</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:16px;"><strong>Best for:</strong> Writing queries from scratch and debugging errors. Use ChatGPT to build the SQL, then Julius AI to visualize the output.</p>
+  </div>
+
+  <!-- CLAUDE -->
+  <div class="tool-card">
+    <h3>3. Claude — Best for Explaining SQL and Writing Narrative</h3>
+    <div class="tool-meta">Price: Free / $20 per month (Pro) · No affiliate</div>
+    <p>Claude is excellent at explaining SQL logic in plain language — which is useful when you inherit a complex query you didn't write, or when you need to document logic for non-technical stakeholders. Paste in a 50-line query and ask "explain what this does step by step" — Claude produces a clear, structured breakdown.</p>
+    <p>Claude is also better than ChatGPT at writing the narrative around data results. Once you have your SQL output, Claude can take the numbers and write a concise executive summary, a stakeholder email, or a slide narrative — with business context, not just data description.</p>
+    <div class="pros-cons">
+      <div class="pros">
+        <strong>✅ Pros</strong>
+        <ul>
+          <li>Best for explaining inherited or complex queries</li>
+          <li>Strong at writing business narrative from data</li>
+          <li>Good at rewriting inefficient queries in plain logic</li>
+          <li>Free tier available</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <strong>❌ Cons</strong>
+        <ul>
+          <li>No direct data connection or visualization</li>
+          <li>Slightly weaker than ChatGPT at raw SQL generation for complex schemas</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:16px;"><strong>Best for:</strong> Explaining queries, writing stakeholder summaries, and documenting logic. Pair with Julius AI for the visual layer.</p>
+  </div>
+
+  <!-- DATABOX -->
+  <div class="tool-card">
+    <h3>⭐ 4. Databox — Best for Automating Recurring SQL Reports</h3>
+    <div class="tool-meta">Price: Free tier available · Paid from $37/month · Affiliate link below</div>
+    <p>Databox solves a different problem than the other tools here. If you're running the same SQL query every week — pulling the same metrics, building the same chart — Databox automates the entire delivery cycle. Connect your data source once, build the dashboard, and it updates and sends automatically.</p>
+    <p>For SQL analysts who maintain recurring reports, this is where the biggest time savings are. The work of generating and formatting a weekly report goes from 45 minutes to zero after the initial setup.</p>
+    <p>Databox Genie, their AI analyst feature, can also generate narrative summaries of your dashboard data automatically — without you writing anything.</p>
+    <div class="pros-cons">
+      <div class="pros">
+        <strong>✅ Pros</strong>
+        <ul>
+          <li>Automates recurring dashboard delivery</li>
+          <li>Connects to databases, Google Sheets, and 100+ data sources</li>
+          <li>Databox Genie generates AI narrative automatically</li>
+          <li>Free tier for small setups</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <strong>❌ Cons</strong>
+        <ul>
+          <li>Setup takes more time than other tools</li>
+          <li>Overkill for one-off analysis</li>
+          <li>Paid plans required for advanced integrations</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:16px;"><strong>Best for:</strong> Analysts who run the same SQL reports on a recurring schedule and want to automate delivery to stakeholders.</p>
+    <p><a class="cta-button" href="https://databox.com?aff_id=14134623&fp_ref=nm93">Try Databox Free →</a></p>
+  </div>
+
+  <h2>The SQL Analyst AI Workflow — How to Use These Together</h2>
+  <p>The most effective setup I've found for SQL-heavy work:</p>
+  <ol>
+    <li><strong>Write the query</strong> — ChatGPT. Describe what you need in plain English, specify the SQL dialect, iterate until the logic is right.</li>
+    <li><strong>Debug or document</strong> — Claude. If the query is complex or inherited, paste it into Claude for a plain-English explanation. Use Claude to write the stakeholder summary once you have results.</li>
+    <li><strong>Visualize the output</strong> — Julius AI. Export your query results as CSV, upload to Julius, describe the chart in plain English. Done in under 60 seconds.</li>
+    <li><strong>Automate recurring reports</strong> — Databox. If you run the same report weekly or monthly, set it up in Databox once and let it deliver automatically.</li>
+  </ol>
+  <p>This workflow replaces what used to take 2–3 hours of manual work with about 30 minutes — most of which is actual thinking, not formatting.</p>
+
+  <div class="verdict-box">
+    <p>🔗 <strong>Related:</strong> <a href="https://nmk86.github.io/ai-analytics-stack-data-analysts.html">The Complete AI Analytics Stack for Data Analysts</a> — how to combine these tools into a full workflow.</p>
+    <p>🔗 <strong>Related:</strong> <a href="https://nmk86.github.io/how-to-generate-charts-without-code.html">How to Generate Charts Without Code</a> — a step-by-step guide to using Julius AI for visualizations.</p>
+  </div>
+
+  <h2>Which Tool Should You Start With?</h2>
+  <p>If you only try one tool from this guide, make it Julius AI — specifically for the step after you run your query. Most SQL analysts already use ChatGPT or Claude for writing queries. The gap that Julius AI fills — from query output to clean chart — is where the most time is lost and where the improvement is most visible.</p>
+  <p>The free tier is enough to test it on a real dataset. You'll know within 10 minutes whether it fits your workflow.</p>
+  <p><a class="cta-button" href="https://julius.ai/?via=noam">Try Julius AI Free — Visualize Your First SQL Result →</a></p>
+
+  <!-- FAQ -->
+  <h2>Frequently Asked Questions</h2>
+
+  <details class="faq-item">
+    <summary>Can AI tools actually write production-ready SQL?</summary>
+    <p>For straightforward queries — yes, with review. ChatGPT and Claude generate solid SQL for common patterns: aggregations, joins, window functions, subqueries. For complex multi-table logic with business-specific rules, AI-generated SQL needs validation before it goes to production. Use AI to write the first draft and handle the boilerplate; you review the logic.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Can Julius AI connect directly to my database?</summary>
+    <p>Julius AI works best with CSV or Excel file uploads — you run your query in your database tool, export the results, and upload to Julius for visualization. Direct database connections are available on higher-tier plans. For most analysts, the export-and-upload workflow is fast enough to make it worthwhile.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Is ChatGPT or Claude better for writing SQL?</summary>
+    <p>ChatGPT has a slight edge for raw SQL generation, especially for complex multi-table queries. Claude is better for explaining existing queries and writing the business narrative around results. For most analysts, it's worth having both free tiers available and using each for what it's best at.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>What SQL dialects does Julius AI support?</summary>
+    <p>Julius AI doesn't run SQL directly — it works with the output of your queries (uploaded as CSV or Excel). So it's compatible with any database you already use: BigQuery, PostgreSQL, MySQL, Snowflake, Redshift, or anything else. Run the query in your own tool, export the result, and Julius handles the visualization.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Do I need to know SQL to use these AI tools?</summary>
+    <p>For writing SQL with AI help — some basic understanding makes the output more reliable. You still need to know what you're trying to ask. For visualizing SQL results with Julius AI — no SQL knowledge required. You upload the output table and describe the chart in plain English.</p>
+  </details>
+
+  <!-- EMAIL SIGNUP -->
+  <div class="email-box">
+    <h3>Get 5 Free AI Prompts for Data Analysts</h3>
+    <p>Join analysts who save hours every week with AI tools.</p>
+    <ul>
+      <li>✓ Copy-paste ready — use today</li>
+      <li>✓ Works with Julius AI, Claude &amp; ChatGPT</li>
+      <li>✓ Tested in real analyst workflows</li>
+      <li>✓ From an analyst with 8 years experience</li>
+    </ul>
+    <div class="gr-form">
+      <script>
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "https://app.getresponse.com/view_webform_v2.js?u=w6nKg&webforms_id=9533d7d1-64b1-45eb-a78b-b22b6ac08648";
+          fjs.parentNode.insertBefore(js, fjs);
+        })(document, "script", "getresponse-form");
+      </script>
+    </div>
+  </div>
+
+  <p class="affiliate-note">⭐ Some links may be affiliate links.</p>
+
+  <a href="https://nmk86.github.io/" class="back-link">← Back to all guides</a>
+
+</div>
+</body>
+</html>
