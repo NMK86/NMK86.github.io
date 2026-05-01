@@ -32,17 +32,29 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: Georgia, serif; font-size: 18px; line-height: 1.7; color: #222; background: #fff; }
-    nav { background: #4a90d9; padding: 14px 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
-    nav a { color: #fff; text-decoration: none; font-size: 15px; font-family: Arial, sans-serif; }
-    nav a:hover { text-decoration: underline; }
-    .nav-brand { font-weight: bold; font-size: 17px; margin-right: 16px; }
-    .nav-group { position: relative; display: inline-block; }
-    .nav-group > span { color: #fff; font-size: 15px; font-family: Arial, sans-serif; cursor: pointer; padding: 4px 8px; }
-    .nav-group:hover .dropdown { display: block; }
-    .dropdown { display: none; position: absolute; top: 100%; left: 0; background: #fff; border: 1px solid #ddd; min-width: 240px; z-index: 999; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
-    .dropdown a { display: block; padding: 9px 14px; color: #333; font-size: 14px; font-family: Arial, sans-serif; text-decoration: none; }
-    .dropdown a:hover { background: #f0f4ff; }
-    .dropdown .section-label { padding: 8px 14px 4px; font-size: 12px; font-family: Arial, sans-serif; color: #888; text-transform: uppercase; letter-spacing: 0.05em; }
+    nav {
+  background: #4a90d9;
+  margin: -20px -20px 30px -20px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  z-index: 100;
+}
+.nav-brand { color: white; font-weight: bold; font-size: 15px; padding: 14px 12px 14px 0; margin-right: 8px; white-space: nowrap; text-decoration: none; }
+.nav-item { position: relative; }
+.nav-btn { background: none; border: none; color: white; font-size: 14px; padding: 14px 14px; cursor: pointer; white-space: nowrap; font-family: Arial, sans-serif; transition: opacity 0.2s; }
+.nav-btn:hover { opacity: 0.8; }
+.nav-btn::after { content: " ▾"; font-size: 11px; }
+.dropdown { display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #e0e0e0; border-radius: 6px; box-shadow: 0 4px 16px rgba(0,0,0,0.12); min-width: 280px; z-index: 200; }
+.nav-item:hover .dropdown { display: block; }
+nav .dropdown a { display: block; padding: 10px 16px; color: #4a90d9; font-weight: bold; text-decoration: none; font-size: 13px; border-bottom: 1px solid #f5f5f5; transition: background 0.15s; }
+nav .dropdown a:last-child { border-bottom: none; }
+nav .dropdown a:hover { background: #f0f7ff; }
+.dropdown-header { padding: 8px 16px 4px; font-size: 11px; font-weight: bold; color: #999; text-transform: uppercase; letter-spacing: 0.05em; }
+nav .dropdown a.affiliate::after { content: " →"; }
+
 
     .container { max-width: 960px; margin: 0 auto; padding: 40px 20px 60px; }
     .back-link { display: inline-block; margin-bottom: 24px; color: #4a90d9; font-family: Arial, sans-serif; font-size: 15px; text-decoration: none; }
@@ -77,11 +89,8 @@
     .pros, .cons { flex: 1; min-width: 180px; }
     .pros strong { color: #2e7d32; }
     .cons strong { color: #c62828; }
-
-    .faq-item { border-top: 1px solid #e0e0e0; padding: 18px 0; }
-    .faq-item:last-child { border-bottom: 1px solid #e0e0e0; }
-    .faq-item summary { font-weight: bold; font-family: Arial, sans-serif; cursor: pointer; font-size: 1em; }
-    .faq-item p { margin-top: 10px; margin-bottom: 0; }
+    .faq-item { margin: 20px 0; border-left: 3px solid #4a90d9; padding-left: 16px; }
+    .faq-q { font-weight: bold; color: #1a5f9e; margin-bottom: 6px; }
 
     .email-box { background: #f0f7ff; border: 1px solid #c5d9f0; border-radius: 6px; padding: 28px; margin: 44px 0; text-align: center; }
     .email-box h3 { margin-top: 0; margin-bottom: 8px; font-size: 1.2em; }
@@ -89,57 +98,52 @@
     .email-box ul { text-align: left; display: inline-block; margin-bottom: 20px; }
     .gr-form { margin-top: 0; }
 
-    .affiliate-note { font-size: 0.85em; color: #888; font-family: Arial, sans-serif; margin-top: 40px; }
+        .internal-link { background: #f5f5f5; padding: 10px 14px; border-radius: 6px; margin: 12px 0; font-size: 14px; }
+
+.affiliate-note { font-size: 0.85em; color: #888; font-family: Arial, sans-serif; margin-top: 40px; }
   </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a href="https://nmk86.github.io/" class="nav-brand">AI Tools for Data Analysts</a>
-
-  <div class="nav-group">
-    <span>All Guides ▾</span>
+  <a href="/" class="nav-brand">AI Tools for Data Analysts</a>
+  <div class="nav-item">
+    <button class="nav-btn">All Guides</button>
     <div class="dropdown">
-      <div class="section-label">Reviews &amp; Comparisons</div>
-      <a href="https://nmk86.github.io/best-ai-tools-data-analysts.html">Best AI Tools for Data Analysts in 2026</a>
-      <a href="https://nmk86.github.io/julius-ai-alternatives-data-analysts.html">Julius AI Alternatives</a>
-      <a href="https://nmk86.github.io/julius-ai-review-2026.html">Julius AI Review 2026</a>
-      <a href="https://nmk86.github.io/julius-ai-vs-claude-data-analysis.html">Julius AI vs Claude for Data Analysis</a>
-      <a href="https://nmk86.github.io/chatgpt-vs-claude-data-analysis.html">ChatGPT vs Claude for Data Analysis</a>
-      <a href="https://nmk86.github.io/getresponse-vs-activecampaign-data-reports.html">GetResponse vs ActiveCampaign</a>
-      <div class="section-label">Practical Guides</div>
-      <a href="https://nmk86.github.io/how-to-automate-weekly-kpi-report.html">Automate Your Weekly KPI Report</a>
-      <a href="https://nmk86.github.io/how-to-generate-charts-without-code.html">Generate Charts Without Code</a>
-      <a href="https://nmk86.github.io/save-time-ai-data-analysts.html">Save 10 Hours a Week with AI</a>
-      <a href="https://nmk86.github.io/ai-data-analysis-reports.html">Write Better Data Reports with AI</a>
-      <a href="https://nmk86.github.io/perplexity-ai-data-research.html">Use Perplexity for Data Research</a>
-      <a href="https://nmk86.github.io/best-ai-tools-data-presentations.html">Best AI Tools for Presentations</a>
-      <div class="section-label">Workflows &amp; Stacks</div>
-      <a href="https://nmk86.github.io/ai-analytics-stack-data-analysts.html">The Complete AI Analytics Stack</a>
-      <a href="https://nmk86.github.io/automated-report-workflow-analysts.html">The Automated Report Workflow</a>
-      <a href="https://nmk86.github.io/databox-automated-kpi-dashboard.html">Automated KPI Dashboards with Databox</a>
+      <div class="dropdown-header">Reviews & Comparisons</div>
+      <a href="/best-ai-tools-data-analysts.html">Best AI Tools for Data Analysts in 2026</a>
+      <a href="/chatgpt-vs-claude-data-analysis.html">ChatGPT vs Claude for Data Analysis</a>
+      <a href="/getresponse-vs-activecampaign-data-reports.html">GetResponse vs ActiveCampaign</a>
+      <div class="dropdown-header">Practical Guides</div>
+      <a href="/how-to-automate-weekly-kpi-report.html">Automate Your Weekly KPI Report</a>
+      <a href="/how-to-generate-charts-without-code.html">Generate Charts Without Code</a>
+<a href="/save-time-ai-data-analysts.html">Save 10 Hours a Week with AI</a>
+      <a href="/ai-data-analysis-reports.html">Write Better Data Reports with AI</a>
+      <a href="/perplexity-ai-data-research.html">Use Perplexity for Data Research</a>
+      <a href="/best-ai-tools-data-presentations.html">Best AI Tools for Presentations</a>
+      <div class="dropdown-header">Workflows & Stacks</div>
+      <a href="/ai-analytics-stack-data-analysts.html">The Complete AI Analytics Stack</a>
+      <a href="/automated-report-workflow-analysts.html">The Automated Report Workflow</a>
+      <a href="/databox-automated-kpi-dashboard.html">Automated KPI Dashboards with Databox</a>
     </div>
   </div>
-
-  <div class="nav-group">
-    <span>AI Tools ▾</span>
+  <div class="nav-item">
+    <button class="nav-btn">AI Tools</button>
     <div class="dropdown">
-      <div class="section-label">Recommended Tools</div>
-      <a href="https://julius.ai/?via=noam">Julius AI — Chart generation</a>
-      <a href="https://www.getresponse.com?a=w6nKgweWcH">GetResponse — Automate reports</a>
-      <a href="https://databox.com?aff_id=14134623&amp;fp_ref=nm93">Databox — KPI dashboards</a>
-      <a href="https://databox.com/ai-analyst?fp_ref=nm93">Databox Genie — AI analyst</a>
-      <a href="https://manus.im/invitation/SMVIYQYHOHRS?utm_source=invitation&utm_medium=social&utm_campaign=copy_link">Manus AI — Autonomous research</a>
-      <div class="section-label">Free Tools</div>
-      <a href="https://claude.ai">Claude — Analysis &amp; writing</a>
-      <a href="https://perplexity.ai">Perplexity — Research</a>
-      <a href="https://chatgpt.com">ChatGPT — Code &amp; SQL</a>
-      <a href="https://manus.im/invitation/SMVIYQYHOHRS?utm_source=invitation&utm_medium=social&utm_campaign=copy_link">Manus AI — Autonomous research</a>
+      <div class="dropdown-header">Recommended Tools</div>
+      <a href="https://julius.ai/?via=noam" target="_blank" class="affiliate" onclick="gtag('event','affiliate_click',{'tool':'julius','location':'nav'});">Julius AI — Chart generation</a>
+      <a href="https://www.getresponse.com?a=w6nKgweWcH" target="_blank" class="affiliate" onclick="gtag('event','affiliate_click',{'tool':'getresponse','location':'nav'});">GetResponse — Automate reports</a>
+      <a href="https://databox.com?aff_id=14134623&fp_ref=nm93" target="_blank" class="affiliate" onclick="gtag('event','affiliate_click',{'tool':'databox','location':'nav'});">Databox — KPI dashboards</a>
+      <a href="https://databox.com/ai-analyst?fp_ref=nm93" target="_blank" class="affiliate" onclick="gtag('event','affiliate_click',{'tool':'databox_genie','location':'nav'});">Databox Genie — AI analyst</a>
+      <a href="https://manus.im/invitation/SMVIYQYHOHRS?utm_source=invitation&utm_medium=social&utm_campaign=copy_link" target="_blank" class="affiliate">Manus AI — Autonomous research</a>
+      <div class="dropdown-header">Free Tools</div>
+      <a href="https://claude.ai" target="_blank">Claude — Analysis & writing</a>
+      <a href="https://perplexity.ai" target="_blank">Perplexity — Research</a>
+      <a href="https://chatgpt.com" target="_blank">ChatGPT — Code & SQL</a>
+      <a href="https://manus.im/invitation/SMVIYQYHOHRS?utm_source=invitation&utm_medium=social&utm_campaign=copy_link" target="_blank">Manus AI — Autonomous research</a>
     </div>
   </div>
-
-  <a href="https://nmk86.github.io/blog.html">Blog</a>
 </nav>
 
 <!-- CONTENT -->
@@ -152,7 +156,7 @@
 
   <div class="verdict-box">
     <p><strong>Quick verdict:</strong> The best AI tool for SQL depends on what stage of the workflow you're in. ChatGPT and Claude are strong for writing and debugging queries. Julius AI is the clear winner when you need to visualize the results without writing more code. This guide covers exactly when to use each one.</p>
-    <p>👉 <a class="cta-button" href="https://julius.ai/?via=noam">Try Julius AI Free — Visualize Your SQL Results</a></p>
+    <p>👉 <a class="cta-button" href="https://julius.ai/?via=noam" target="_blank">Try Julius AI Free — Visualize Your SQL Results</a></p>
   </div>
 
   <h2>Why SQL Analysts Need AI Tools in 2026</h2>
@@ -184,7 +188,7 @@
         <td>⭐ <strong>Julius AI</strong></td>
         <td>Visualizing SQL results — charts from your output in seconds</td>
         <td>Free / ~$20/mo</td>
-        <td><a href="https://julius.ai/?via=noam">Try free →</a></td>
+        <td><a href="https://julius.ai/?via=noam" target="_blank">Try free →</a></td>
       </tr>
       <tr>
         <td>ChatGPT</td>
@@ -202,7 +206,7 @@
         <td>⭐ <strong>Databox</strong></td>
         <td>Turning recurring SQL reports into automated dashboards</td>
         <td>Free / $37/mo</td>
-        <td><a href="https://databox.com?aff_id=14134623&fp_ref=nm93">Try free →</a></td>
+        <td><a href="https://databox.com?aff_id=14134623&fp_ref=nm93" target="_blank">Try free →</a></td>
       </tr>
     </tbody>
   </table>
@@ -235,8 +239,10 @@
       </div>
     </div>
     <p style="margin-top:16px;"><strong>Best for:</strong> Analysts who run queries regularly and need to turn results into charts for reports or stakeholder presentations.</p>
-    <p><a class="cta-button" href="https://julius.ai/?via=noam">Try Julius AI Free →</a></p>
+    <p><a class="cta-button" href="https://julius.ai/?via=noam" target="_blank">Try Julius AI Free →</a></p>
   </div>
+
+  <div class="internal-link">📊 Want to see Julius AI as part of a full stack? Read: <a href="/ai-analytics-stack-data-analysts.html">The Complete AI Analytics Stack for Data Analysts</a></div>
 
   <!-- CHATGPT -->
   <div class="tool-card">
@@ -321,8 +327,10 @@
       </div>
     </div>
     <p style="margin-top:16px;"><strong>Best for:</strong> Analysts who run the same SQL reports on a recurring schedule and want to automate delivery to stakeholders.</p>
-    <p><a class="cta-button" href="https://databox.com?aff_id=14134623&fp_ref=nm93">Try Databox Free →</a></p>
+    <p><a class="cta-button" href="https://databox.com?aff_id=14134623&fp_ref=nm93" target="_blank">Try Databox Free →</a></p>
   </div>
+
+  <div class="internal-link">⚡ Want to automate recurring SQL reports? Read: <a href="/how-to-automate-weekly-kpi-report.html">How to Automate Your Weekly KPI Report</a></div>
 
   <h2>The SQL Analyst AI Workflow — How to Use These Together</h2>
   <p>The most effective setup I've found for SQL-heavy work:</p>
@@ -332,6 +340,7 @@
     <li><strong>Visualize the output</strong> — Julius AI. Export your query results as CSV, upload to Julius, describe the chart in plain English. Done in under 60 seconds.</li>
     <li><strong>Automate recurring reports</strong> — Databox. If you run the same report weekly or monthly, set it up in Databox once and let it deliver automatically.</li>
   </ol>
+  <div class="internal-link">🔀 See how Julius AI compares to Claude for data work: <a href="/julius-ai-vs-claude-data-analysis.html">Julius AI vs Claude for Data Analysis</a></div>
   <p>This workflow replaces what used to take 2–3 hours of manual work with about 30 minutes — most of which is actual thinking, not formatting.</p>
 
   <div class="verdict-box">
@@ -342,35 +351,35 @@
   <h2>Which Tool Should You Start With?</h2>
   <p>If you only try one tool from this guide, make it Julius AI — specifically for the step after you run your query. Most SQL analysts already use ChatGPT or Claude for writing queries. The gap that Julius AI fills — from query output to clean chart — is where the most time is lost and where the improvement is most visible.</p>
   <p>The free tier is enough to test it on a real dataset. You'll know within 10 minutes whether it fits your workflow.</p>
-  <p><a class="cta-button" href="https://julius.ai/?via=noam">Try Julius AI Free — Visualize Your First SQL Result →</a></p>
+  <p><a class="cta-button" href="https://julius.ai/?via=noam" target="_blank">Try Julius AI Free — Visualize Your First SQL Result →</a></p>
 
   <!-- FAQ -->
   <h2>Frequently Asked Questions</h2>
 
-  <details class="faq-item">
-    <summary>Can AI tools actually write production-ready SQL?</summary>
+  <div class="faq-item">
+    <div class="faq-q">Can AI tools actually write production-ready SQL?</div>
     <p>For straightforward queries — yes, with review. ChatGPT and Claude generate solid SQL for common patterns: aggregations, joins, window functions, subqueries. For complex multi-table logic with business-specific rules, AI-generated SQL needs validation before it goes to production. Use AI to write the first draft and handle the boilerplate; you review the logic.</p>
-  </details>
+  </div>
 
-  <details class="faq-item">
-    <summary>Can Julius AI connect directly to my database?</summary>
+  <div class="faq-item">
+    <div class="faq-q">Can Julius AI connect directly to my database?</div>
     <p>Julius AI works best with CSV or Excel file uploads — you run your query in your database tool, export the results, and upload to Julius for visualization. Direct database connections are available on higher-tier plans. For most analysts, the export-and-upload workflow is fast enough to make it worthwhile.</p>
-  </details>
+  </div>
 
-  <details class="faq-item">
-    <summary>Is ChatGPT or Claude better for writing SQL?</summary>
+  <div class="faq-item">
+    <div class="faq-q">Is ChatGPT or Claude better for writing SQL?</div>
     <p>ChatGPT has a slight edge for raw SQL generation, especially for complex multi-table queries. Claude is better for explaining existing queries and writing the business narrative around results. For most analysts, it's worth having both free tiers available and using each for what it's best at.</p>
-  </details>
+  </div>
 
-  <details class="faq-item">
-    <summary>What SQL dialects does Julius AI support?</summary>
+  <div class="faq-item">
+    <div class="faq-q">What SQL dialects does Julius AI support?</div>
     <p>Julius AI doesn't run SQL directly — it works with the output of your queries (uploaded as CSV or Excel). So it's compatible with any database you already use: BigQuery, PostgreSQL, MySQL, Snowflake, Redshift, or anything else. Run the query in your own tool, export the result, and Julius handles the visualization.</p>
-  </details>
+  </div>
 
-  <details class="faq-item">
-    <summary>Do I need to know SQL to use these AI tools?</summary>
+  <div class="faq-item">
+    <div class="faq-q">Do I need to know SQL to use these AI tools?</div>
     <p>For writing SQL with AI help — some basic understanding makes the output more reliable. You still need to know what you're trying to ask. For visualizing SQL results with Julius AI — no SQL knowledge required. You upload the output table and describe the chart in plain English.</p>
-  </details>
+  </div>
 
   <!-- EMAIL SIGNUP -->
   <div class="email-box">
@@ -383,16 +392,7 @@
       <li>✓ From an analyst with 8 years experience</li>
     </ul>
     <div class="gr-form">
-      <script>
-        (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s);
-          js.id = id;
-          js.src = "https://app.getresponse.com/view_webform_v2.js?u=w6nKg&webforms_id=9533d7d1-64b1-45eb-a78b-b22b6ac08648";
-          fjs.parentNode.insertBefore(js, fjs);
-        })(document, "script", "getresponse-form");
-      </script>
+      <getresponse-form form-id="9533d7d1-64b1-45eb-a78b-b22b6ac08648" e="1"></getresponse-form>
     </div>
   </div>
 
