@@ -106,6 +106,11 @@
   <a href="/blog.html" class="nav-link">Blog</a>
 </nav>
 
+<div style="background:#1a5f9e;color:white;text-align:center;padding:12px 20px;font-size:15px;font-family:Arial,sans-serif;">
+  🎁 Exclusive offer: Use code <strong>MAY10</strong> for 10% off Julius AI —
+  <a href="https://julius.ai/?via=noam" target="_blank" style="color:#ffd700;font-weight:bold;text-decoration:none;">Claim discount →</a>
+</div>
+
 <p><a href="/" style="color:#4a90d9;text-decoration:none;font-size:16px;">← Back to all guides</a></p>
 
 <h1>Julius AI vs Claude for Data Analysis — Which One Should You Use?</h1>
@@ -480,6 +485,44 @@ Start with Julius AI (Free)
 
 <p style="font-size:13px;color:#888;">⭐ Some links may be affiliate links.</p>
 <p><a href="/" style="color:#4a90d9;text-decoration:none;font-size:16px;">← Back to all guides</a></p>
+
+
+
+<div id="exit-popup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:9999;justify-content:center;align-items:center;">
+  <div style="background:white;border-radius:10px;padding:36px;max-width:480px;width:90%;position:relative;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+    <button onclick="closePopup()" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#888;">✕</button>
+    <p style="font-size:22px;font-weight:bold;color:#1a5f9e;margin:0 0 10px;">Before you go...</p>
+    <p style="font-size:16px;color:#555;margin:0 0 20px;">Get 5 free AI prompts for data analysts — copy-paste ready, tested in real workflows.</p>
+    <getresponse-form form-id="9533d7d1-64b1-45eb-a78b-b22b6ac08648" e="1"></getresponse-form>
+    <p style="font-size:12px;color:#aaa;margin-top:16px;">No spam. Unsubscribe anytime.</p>
+  </div>
+</div>
+
+<script>
+  var popupShown = false;
+
+  function showPopup() {
+    if (!popupShown && !sessionStorage.getItem('popupClosed')) {
+      popupShown = true;
+      document.getElementById('exit-popup').style.display = 'flex';
+    }
+  }
+
+  function closePopup() {
+    document.getElementById('exit-popup').style.display = 'none';
+    sessionStorage.setItem('popupClosed', 'true');
+  }
+
+  document.addEventListener('mouseleave', function(e) {
+    if (e.clientY < 10) showPopup();
+  });
+
+  setTimeout(showPopup, 30000);
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closePopup();
+  });
+</script>
 
 </body>
 </html>
